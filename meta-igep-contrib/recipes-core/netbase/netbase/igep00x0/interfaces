@@ -4,16 +4,27 @@
 auto lo
 iface lo inet loopback
 
-# Wireless interfaces
-iface wlan0 inet dhcp
-	wireless_mode managed
-	wireless_essid any
-	wpa-driver wext
-	wpa-conf /etc/wpa_supplicant.conf
-
 # Wired or wireless interfaces
 auto eth0
 iface eth0 inet dhcp
+
+auto eth0:0
+iface eth0:0 inet static
+        address 192.168.5.1
+        netmask 255.255.255.0
+        network 192.168.5.0
+        gateway 192.168.5.1
+
+# Wireless interfaces
+auto wlan0
+iface wlan0 inet static
+        wireless_mode ad-hoc
+        wireless_essid ##MACBASED##
+        wireless_channel 1
+        address 192.168.6.1
+        netmask 255.255.255.0
+        network 192.168.6.0
+        gateway 192.168.6.1
 
 # Ethernet/RNDIS gadget (g_ether)
 # ... or on host side, usbnet and random hwaddr
