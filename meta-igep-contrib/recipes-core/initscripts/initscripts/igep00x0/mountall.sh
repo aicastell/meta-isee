@@ -65,7 +65,7 @@ while read dev mtpt fstype rest; do
 done
 # nothing to do if is a nfsroot
 if test $mmcroot -eq 1 ; then
-	mount -t auto -o defaults,sync /dev/mmcblk0 /boot
+	mount -t auto -o defaults,sync /dev/mmcblk0p1 /boot
 elif test $nandroot -eq 1 ; then
 	mount -t jffs2 -o defaults,sync /dev/mtdblock1 /boot
 fi
