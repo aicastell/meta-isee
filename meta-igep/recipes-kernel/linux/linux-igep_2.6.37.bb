@@ -8,12 +8,10 @@ COMPATIBLE_MACHINE_igep00x0 = "igep00x0"
 
 inherit kernel kernel-arch
 
-PR = "r1"
-KV = "v${PV}-2"
+PR = "r2"
+KV = "v${PV}-3"
 
-SRC_URI = "git://git.isee.biz/pub/scm/linux-omap-2.6.git;protocol=git;tag=${KV};branch=linux-2.6.37.y \
-	file://0136621a974bb450b21683088723721364ec8631.patch \
-	"
+SRC_URI = "git://git.isee.biz/pub/scm/linux-omap-2.6.git;protocol=git;tag=${KV};branch=linux-2.6.37.y"
 
 do_configure() {
 	rm -f ${S}/.config || true
