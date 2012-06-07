@@ -12,7 +12,7 @@ fi
 
 if [ "$IF_WIRELESS_ESSID" == "##MACBASED##" ]; then
   $IWCONFIG $IFACE essid IGEP_$HWADDR_ESSID
-elif [-n "$IF_WIRELESS_ESSID" ]; then
+elif [ -n "$IF_WIRELESS_ESSID" ]; then
   $IWCONFIG $IFACE essid $IF_WIRELESS_ESSID
 fi
 
