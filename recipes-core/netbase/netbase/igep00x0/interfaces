@@ -13,7 +13,6 @@ iface eth0:0 inet static
         address 192.168.5.1
         netmask 255.255.255.0
         network 192.168.5.0
-        gateway 192.168.5.1
 
 # Wireless interfaces
 auto wlan0
@@ -24,7 +23,6 @@ iface wlan0 inet static
         address 192.168.6.1
         netmask 255.255.255.0
         network 192.168.6.0
-        gateway 192.168.6.1
 
 # Ethernet/RNDIS gadget (g_ether)
 # ... or on host side, usbnet and random hwaddr
@@ -33,7 +31,6 @@ iface usb0 inet static
         address 192.168.7.1
         netmask 255.255.255.0
         network 192.168.7.0
-        gateway 192.168.7.1
 
 # Bluetooth networking
 iface bnep0 inet dhcp

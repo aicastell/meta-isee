@@ -1,6 +1,6 @@
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
 
-PR := "${PR}.2"
+PR := "${PR}.3"
 
 # On igep00x0 starting at 40 does not up the WLAN
 INITSCRIPT_PARAMS_igep00x0 = "start 80 S . stop 40 0 6 1 ."
