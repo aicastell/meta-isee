@@ -5,7 +5,7 @@ LIC_FILES_CHKSUM = "file://lib/board.c;beginline=19;endline=32;md5=6120559432cee
 SECTION = "bootloader"
 
 VER = "${PV}-2"
-PR = "r1"
+PR = "r2"
 
 SRC_URI = "git://git.isee.biz/pub/scm/igep-x-loader.git;protocol=git;tag=release-${VER}"
 
@@ -16,6 +16,10 @@ do_compile() {
 	unset LDFLAGS
 	unset CFLAGS
 	unset CPPFLAGS
+
+	# Ensure signGP program is built for host machine
+	${BUILD_CC} contrib/signGP.c -o contrib/signGP
+
 	oe_runmake CROSS_COMPILE=${TARGET_PREFIX} ${MACHINE}_config
 	oe_runmake CROSS_COMPILE=${TARGET_PREFIX}
 	${S}/contrib/signGP x-load.bin
