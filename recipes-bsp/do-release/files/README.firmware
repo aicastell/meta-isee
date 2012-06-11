@@ -1,0 +1,108 @@
+This README file contains information on creating a SD-card for booting and
+flash the latest IGEP firmware for your IGEP Technology based device. Please
+see the corresponding sections below for details.
+
+Table of Contents
+==================
+
+   I. Overview
+  II. Booting the demo image from a SD-card
+ III. Flashing the demo firmware to the flash
+  IV. Where learn more ?
+   V. Miscellaneous Notes
+
+
+I. Overview
+============
+
+IMPORTANT NOTE: This software is distributed in the hope that it will be
+useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE 
+
+This demonstration software provides a mobile environment and visual
+style for embedded devices. The image supports X11 with a Sato theme,
+Pimlico applications, and contains terminal, editor, and file manager.
+
+The demo is provided entirely and is not licensed for any use other than
+evaluation purposes of the IGEP technology based devices.
+
+
+II. Booting the demo firmware from a SD-card
+=============================================
+
+This tarball contains a bootable image, which can be used to directly
+boot firmware off of a SD-card.
+
+Under Linux, insert a SD-card and use igep-media-create script to copy the
+image to it.
+
+ $ ./igep-media-create --mmc <mmc> --image <image file> --machine <machine>
+
+where,
+
+  <mmc>        - is the SD-card device.
+  <image file> - is the file that contains the rootfs image.
+  <machine>    - is the Processor Board, options are:
+                   igep0020 - For IGEP v2 Processor Board
+                   igep0030 - For IGEP COM MODULE Processor Board
+                   igep0032 - For IGEP COM PROTON Processor Board
+
+For example, assuming the SD-card takes device /dev/sdf, type
+
+ $ ./igep-media-create --mmc /dev/sdf --image demo-image-sato.tar.bz2 --machine igep0020
+
+This should give you a bootable SD-card. Insert the device into a micro-SD
+card socket on the target, and power on. This should result in a system booted
+to the Sato graphical desktop.
+
+If you want to ssh into the system, you have several options:
+
+ o Ethernet, you should assign an IP in the range 192.168.5.[2-254] and connect
+         to target using a SSH client and connecting to 192.168.5.1
+ o Wifi, connect to IGEP_xx network, a dynamic IP should be assigned in your
+         host and you can entry into the target connecting to 192.168.6.1
+ o USB ethernet gadget, a dynamic IP should be assigned in your
+         host and you can entry into the target connecting to 192.168.7.1
+ 
+The root password is empty, so to log in type 'root' for the user name and hit
+'Enter' at the Password prompt: and you should be in.
+
+
+III. Flashing the demo firmware to the flash
+=============================================
+
+Once your system booted from the SD-card, you can store the firmware into the
+flash. Enter into the root terminal an run,
+
+ # igep-flash
+
+When finish, power off your board, unplug the micro-SD card and power on the
+board. That's all, enjoy the new firmware running from the flash memory. 
+
+
+IV. Where learn more ?
+=======================
+
+Learn more at
+
+ http://www.isee.biz
+ http://labs.isee.biz
+ 
+Visit the Free Support Forum to share experiences and knowledge at
+
+ http://forum.isee.biz
+
+or using the IRC chat at irc.freenode.net (#igep)
+
+
+V. Miscellaneous Notes
+=======================
+
+Speed up flash procedure
+-------------------------
+By default the flash script runs the nandtest command to mark bad blocks, this
+can take a long time and in most cases is not necessary, you can speed up the
+flash procedure running the script as follows:
+
+ # igep-flash --skip-nantest
+ 
