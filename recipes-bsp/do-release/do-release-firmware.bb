@@ -28,6 +28,7 @@ do_install() {
 	install -d ${D}/${FWPATH}
 	install -m 0644 ${WORKDIR}/README.firmware ${D}/${FWPATH}/README
 	install -m 0644 ${DEPLOY_DIR_IMAGE}/${FWFILE} ${D}/${FWPATH}
+	install -m 0644 ${S}/scripts/e-functions ${D}/${FWPATH}
 	install -m 0755 ${S}/scripts/igep-media-create ${D}/${FWPATH}
 }
 
