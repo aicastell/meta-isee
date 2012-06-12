@@ -5,7 +5,9 @@ the signal from a transceiver. The decoding is done completely in software."
 LICENSE = "LGPLv2"
 LIC_FILES_CHKSUM = "file://COPYING;md5=3bf50002aefd002f49e7bb854063f7e7"
 
-PR = "r0"
+PR = "r1"
+
+RDEPENDS_${PN} += "sox"
 
 SRC_URI = "https://launchpad.net/ubuntu/+archive/primary/+files/multimon_1.0.orig.tar.gz;name=tarball \
 	https://launchpad.net/ubuntu/+archive/primary/+files/multimon_1.0-5ubuntu1.diff.gz;name=patch \
