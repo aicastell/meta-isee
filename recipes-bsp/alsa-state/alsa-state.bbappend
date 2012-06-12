@@ -1,3 +1,3 @@
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
 
-PR := "${PR}.3"
+PR := "${PR}.4"
