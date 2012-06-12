@@ -386,7 +386,7 @@ state.igep {
 	control.29 {
 		iface MIXER
 		name 'Analog Left AUXL Capture Switch'
-		value false
+		value true
 		comment {
 			access 'read write'
 			type BOOLEAN
