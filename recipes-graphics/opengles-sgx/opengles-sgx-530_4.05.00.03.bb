@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://TSPA.txt;md5=c0d5d9c1e38b41677144c4e24d6ddee1"
 
 RDEPENDS = "devmem2 powervr-sgx-530"
 
-PR = "r0"
+PR = "r1"
 
 SRC_URI = "http://meta-igep.googlecode.com/files/${PN}-${PV}.tar.gz \
 	file://init \
@@ -45,6 +45,7 @@ RDEPENDS_${PN} = "libegl1-sgx-530 libgles1-sgx-530 libgles2-sgx-530 libopenvg1-s
 
 PACKAGES = " \
 	${PN} \
+	${PN}-dev \
 	libegl1-sgx-530 \
 	libgles1-sgx-530 \
 	libgles2-sgx-530 \
@@ -66,6 +67,8 @@ FILES_${PN} = "${sysconfdir} \
 	${libdir}/libusc.so* \
 	${libdir}/libsrv_init.so* \
 "
+
+FILES_${PN}-dev = "${includedir}"
 
 FILES_libegl1-sgx-530 = " \
 	${libdir}/libEGL.so* \
