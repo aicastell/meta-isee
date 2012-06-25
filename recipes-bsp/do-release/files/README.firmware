@@ -74,10 +74,19 @@ III. Flashing the demo firmware to the flash
 Once your system booted from the SD-card, you can store the firmware into the
 flash. Enter into the root terminal an run,
 
- # igep-flash
+ # igep-flash --image /opt/firmware/demo-image-sato-igep00x0.tar.bz
 
 When finish, power off your board, unplug the micro-SD card and power on the
 board. That's all, enjoy the new firmware running from the flash memory. 
+
+-------------------------------
+Note: Speed up flash procedure
+-------------------------------
+By default the flash script runs the nandtest command to mark bad blocks, this
+can take a long time and in most cases is not necessary, you can speed up the
+flash procedure running the script as follows:
+
+ # igep-flash --image /opt/firmware/demo-image-sato-igep00x0.tar.bz --skip-nandtest
 
 
 IV. Where learn more ?
@@ -94,15 +103,3 @@ Visit the Free Support Forum to share experiences and knowledge at
 
 or using the IRC chat at irc.freenode.net (#igep)
 
-
-V. Miscellaneous Notes
-=======================
-
-Speed up flash procedure
--------------------------
-By default the flash script runs the nandtest command to mark bad blocks, this
-can take a long time and in most cases is not necessary, you can speed up the
-flash procedure running the script as follows:
-
- # igep-flash --skip-nantest
- 
