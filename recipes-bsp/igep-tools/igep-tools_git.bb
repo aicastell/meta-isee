@@ -4,10 +4,10 @@ HOMEPAGE = "http://www.isee.biz"
 LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://COPYING.GPL;md5=751419260aa954499f7abaabaa882bbe"
 
-SRCREV = "61273eca11241f298f9d9a1ddf1deddb42c75b3a"
+SRCREV = "a5536f9cdc02a4592eb40b2ff400c40a56744b3d"
 
 PV = "1.0+git${SRCPV}"
-PR = "r1"
+PR = "r2"
 
 inherit update-rc.d
 
