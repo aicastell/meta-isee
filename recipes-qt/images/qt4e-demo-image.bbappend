@@ -1,6 +1,9 @@
 
+IMAGE_FEATURES += "package-management"
+
 CORE_IMAGE_EXTRA_INSTALL_igep00x0 += "\
 	igep-x-loader \
+	poky-feed-config-rpm \
 	qt4-embedded-plugin-gfxdriver-gfxpvregl \
 	libqt-embeddedpvrqwswsegl4 \
 	"
