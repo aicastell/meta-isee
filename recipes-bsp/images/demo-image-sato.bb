@@ -22,7 +22,8 @@ EXTRA_UTIL_LINUX = "util-linux e2fsprogs-mke2fs grep dosfstools sysfsutils parte
 #util-linux-losetup
 
 EXTRA_BSP = "poky-feed-config-rpm openssh-root-tweaks mtd-utils writeloader \
-	devmem2 igep-x-loader igep-tools cpufrequtils canutils alsa-states"
+	devmem2 igep-x-loader igep-tools cpufrequtils canutils alsa-states \
+	media-ctl yavta"
 
 EXTRA_TESTTOOLS = "iperf memtester evtest multimon i2c-tools" 
 
