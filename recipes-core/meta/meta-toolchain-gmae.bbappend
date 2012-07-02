@@ -29,6 +29,12 @@ toolchain_create_sdk_env_script_append() {
     # make a symbolic link to mkspecs for compatibility with Nokia's SDK
     # and QTCreator
     (cd ${SDK_OUTPUT}/${QT_TOOLS_PREFIX}/..; ln -s ${SDKTARGETSYSROOT}/usr/share/qtopia/mkspecs mkspecs;)
+
+    # make a symbolic link that points the latest 1.2 based toolchain
+    (cd ${SDK_OUTPUT}/${SDKPATH}/..; ln -s ${SDK_VERSION} 1.2;)
+
+    # make a symbolic link named bin for compatibility with Code Composer IDE
+    (cd ${SDK_OUTPUT}/${SDKPATHNATIVE}/${bindir_nativesdk}/${MULTIMACH_TARGET_SYS}; ln -s . bin;)
 }
 
 #This function overrides the version information file
