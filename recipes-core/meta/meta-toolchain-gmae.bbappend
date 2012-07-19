@@ -2,7 +2,7 @@ require conf/distro/release.inc
 
 TOOLCHAIN_HOST_TASK = "task-qte-toolchain-host-nativesdk task-cross-canadian-${TRANSLATED_TARGET_ARCH}"
 TOOLCHAIN_TARGET_TASK = "${TOOLCHAIN_TARGET_GMAETASK} task-qte-toolchain-target alsa-lib-dev"
-TOOLCHAIN_OUTPUTNAME = "${SDK_NAME}-toolchain-sdk-${SDK_VERSION}-${SDK_SUBVERSION}${EXTRAVERSION}"
+TOOLCHAIN_OUTPUTNAME = "igep-sdk-yocto-toolchain-${SDK_VERSION}-${SDK_SUBVERSION}${EXTRAVERSION}"
 
 QT_DIR_NAME = "qtopia"
 QT_TOOLS_PREFIX = "${SDKPATHNATIVE}${bindir_nativesdk}"

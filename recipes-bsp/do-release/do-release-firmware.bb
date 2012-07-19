@@ -3,24 +3,24 @@ LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://${COREBASE}/LICENSE;md5=3f40d7994397109285ec7b81fdeb3b58 \
                     file://${COREBASE}/meta/COPYING.MIT;md5=3da9cfbcb788c80a0384361b4de20420"
 
-PR = "r1"
-
 require conf/distro/release.inc
+
+PR = "r2.${ISEE_SUBVERSION}"
 
 EXCLUDE_FROM_WORLD = "1"
 
 FWIMAGE = "demo-image-sato"
 FWFILE = "${FWIMAGE}-${MACHINE}.tar.bz2"
-FWPATH = "poky-firmware-${POKY_VERSION}-${POKY_SUBVERSION}${EXTRAVERSION}"
+FWPATH = "igep_firmware-yocto-${DISTRO_VERSION}-${ISEE_SUBVERSION}${EXTRAVERSION}"
 
 DEPLOY_DIR_BINARY = "${DEPLOY_DIR}/binary"
 
-#inherit meta deploy
-
-SRCREV = "9e5c71e95fc9042fa13f18b9c2da8bee01f51f31"
+SRCREV = "465ad82d6ad6514f8821f6f9e5f25ce978898e53"
 
 SRC_URI = "git://git.isee.biz/pub/scm/igep-tools.git;protocol=git \
-	file://README.firmware"
+	file://README \
+	file://CHANGELOG \
+"
 
 S = "${WORKDIR}/git"
 
@@ -28,7 +28,8 @@ do_install[depends] += "${FWIMAGE}:do_rootfs"
 do_install[nostamp] = "1"
 do_install() {
 	install -d ${D}/${FWPATH}
-	install -m 0644 ${WORKDIR}/README.firmware ${D}/${FWPATH}/README
+	install -m 0644 ${WORKDIR}/README ${D}/${FWPATH}/README
+	install -m 0644 ${WORKDIR}/CHANGELOG ${D}/${FWPATH}/CHANGELOG
 	install -m 0644 ${DEPLOY_DIR_IMAGE}/${FWFILE} ${D}/${FWPATH}
 	install -m 0644 ${S}/scripts/e-functions ${D}/${FWPATH}
 	install -m 0755 ${S}/scripts/igep-media-create ${D}/${FWPATH}
