@@ -4,8 +4,10 @@ INHIBIT_DEFAULT_DEPS = "1"
 DEPENDS += "unifdef-native"
 PR = "r2"
 
-SRC_URI = "${KERNELORG_MIRROR}/linux/kernel/v2.6/linux-${PV}.tar.bz2 \
-	"
+SRC_URI = "${KERNELORG_MIRROR}/linux/kernel/v2.6/linux-${PV}.tar.bz2"
+
+SRC_URI[md5sum] = "c8ee37b4fdccdb651e0603d35350b434"
+SRC_URI[sha256sum] = "edbf091805414739cf57a3bbfeba9e87f5e74f97e38f04d12060e9e0c71e383a"
 
 S = "${WORKDIR}/linux-${PV}"
 
