@@ -6,22 +6,22 @@ Dependencies
 
 This layer depends on:
 
-  URI: git://git.yoctoproject.org/poky.git
+  URI: git://git.isee.biz/pub/scm/poky.git
   branch: denzil
 
 Table of Contents
 =================
 
-  I. Building the meta-igep BSP layer
+  I. Building the meta-isee BSP layer
 
 
-I. Building the meta-igep BSP layer
+I. Building the meta-isee BSP layer
 =========================================
 
 In order to build an image with BSP support for a given release, you
 need to download the corresponding BSP repository.
 
-  $ git clone -b denzil git://git.yoctoproject.org/poky
+  $ git clone -b denzil git://git.isee.biz/pub/scm/poky.git
 
 Enter to the poky directory,
 
@@ -35,7 +35,7 @@ and clone the meta-isee layer.
 
 Having done that, and assuming you downloaded the BSP contents
 at the top-level of your yocto build tree, you can build a igep
-image by adding the location of the meta-igep layer to
+image by adding the location of the meta-isee layer to
 conf/bblayers.conf, e.g.:
 
         <path to>/meta-isee \
