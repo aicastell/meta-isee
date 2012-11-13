@@ -8,13 +8,13 @@ COMPATIBLE_MACHINE_igep00x0 = "igep00x0"
 
 inherit kernel kernel-arch
 
-PR = "r4"
-KV = "${PV}-4"
+PR = "r5"
+KV = "${PV}-5"
 
 SRC_URI = "http://downloads.isee.biz/pub/releases/linux_kernel/v${KV}/linux-omap-${KV}.tar.gz"
 
-SRC_URI[md5sum] = "f76ad40bd054c16fef4023cf1bce5c50"
-SRC_URI[sha256sum] = "8977643d6ab6412d77cd1884c854d070f4785d54880fa3100fa07c3a0b649a4d"
+SRC_URI[md5sum] = "ff5824f64fe6546ab5e6e69250e4b7ce"
+SRC_URI[sha256sum] = "2d36496becd7f3ba390b68bf452dfe0041c16048cd8770426b1828abe4e8f4c2"
 
 do_configure() {
 	rm -f ${S}/.config || true
