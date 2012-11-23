@@ -29,7 +29,7 @@ EXTRA_TESTTOOLS = "iperf memtester evtest multimon i2c-tools tcpdump"
 
 EXTRA_GRAPHICS = "xinput-calibrator xterm"
 
-EXTRA_CONNECTIVITY = "ppp ppp-tools dhcp-server iw openssh-sftp-server lighttpd"
+EXTRA_CONNECTIVITY = "ppp ppp-tools dhcp-server iw openssh-sftp-server lighttpd web-webkit"
 
 EXTRA_LIBS = "libsdl"
 
