@@ -25,11 +25,13 @@ EXTRA_BSP = "poky-feed-config-rpm openssh-root-tweaks mtd-utils writeloader \
 	devmem2 igep-x-loader igep-tools cpufrequtils canutils alsa-states \
 	media-ctl yavta iproute2 bridge-utils"
 
-EXTRA_TESTTOOLS = "iperf memtester evtest multimon i2c-tools" 
+EXTRA_TESTTOOLS = "iperf memtester evtest multimon i2c-tools tcpdump"
 
 EXTRA_GRAPHICS = "xinput-calibrator xterm"
 
 EXTRA_CONNECTIVITY = "ppp ppp-tools dhcp-server iw openssh-sftp-server lighttpd"
+
+EXTRA_LIBS = "libsdl"
 
 IMAGE_INSTALL += " \
 	${EXTRA_BSP} \
@@ -37,5 +39,6 @@ IMAGE_INSTALL += " \
 	${EXTRA_UTIL_LINUX} \
 	${EXTRA_GRAPHICS} \
 	${EXTRA_CONNECTIVITY} \
+	${EXTRA_LIBS} \
 	task-python \
 	gnuplot "
