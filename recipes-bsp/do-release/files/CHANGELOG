@@ -2,6 +2,20 @@ CHANGELOG IGEP FIRMWARE
 =======================
 
 ---------------------------------------------------------
+--- igep_firmware-yocto-1.2.1-2 (released 2012-11-23) ---
+---------------------------------------------------------
+	* Updated kernel from 2.6.37-4 to 2.6.37-5
+	* Updated bootloader to version 2.5.0-2
+	* Added hardware support for:
+		* IGEP COM ELECTRON
+	* #14: zypper: upgrade "util-linux-blkid" is unsuccessful
+	* #33: Add alsa-dev package
+	* #71: Disable video screensaver by default
+	* #78: Add tcpdump package to default image
+	* #79: Add web-webkit package to default image
+	* #80: Add libsdl package to default image
+
+---------------------------------------------------------
 --- igep_firmware-yocto-1.2.1-1 (released 2012-07-17) ---
 ---------------------------------------------------------
 	* Based on Yocto 1.2.1 (denzil)
