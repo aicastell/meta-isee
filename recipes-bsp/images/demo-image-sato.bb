@@ -25,7 +25,7 @@ EXTRA_BSP = "poky-feed-config-rpm openssh-root-tweaks mtd-utils writeloader \
 	devmem2 igep-x-loader igep-tools cpufrequtils canutils alsa-states \
 	media-ctl yavta iproute2 bridge-utils"
 
-EXTRA_TESTTOOLS = "iperf memtester evtest multimon i2c-tools tcpdump"
+EXTRA_TESTTOOLS = "iperf memtester evtest multimon i2c-tools tcpdump python-mysql-connector"
 
 EXTRA_GRAPHICS = "xinput-calibrator xterm"
 
