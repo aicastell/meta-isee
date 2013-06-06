@@ -8,7 +8,7 @@ PR = "r1"
 
 DEPENDS = "libnl pkgconfig"
 
-SRC_URI = "http://wireless.kernel.org/download/iw/${P}.tar.bz2 \
+SRC_URI = "https://www.kernel.org/pub/software/network/iw/${P}.tar.bz2 \
            file://0001-iw-version.sh-don-t-use-git-describe-for-versioning.patch \
           "
 
