@@ -29,9 +29,9 @@ EXTRA_TESTTOOLS = "iperf memtester evtest multimon i2c-tools tcpdump python-mysq
 
 EXTRA_GRAPHICS = "xinput-calibrator xterm"
 
-EXTRA_CONNECTIVITY = "ppp ppp-tools dhcp-server iw openssh-sftp-server lighttpd web-webkit"
+EXTRA_CONNECTIVITY = "ppp ppp-tools dhcp-server iw openssh-sftp-server lighttpd web-webkit ntp"
 
-EXTRA_LIBS = "libsdl"
+EXTRA_LIBS = "libsdl fftw"
 
 IMAGE_INSTALL += " \
 	${EXTRA_BSP} \
