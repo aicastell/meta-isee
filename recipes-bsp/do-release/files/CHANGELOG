@@ -2,6 +2,14 @@ CHANGELOG IGEP FIRMWARE
 =======================
 
 ---------------------------------------------------------
+--- igep_firmware-yocto-1.2.2-3 (released 2013-06-10) ---
+---------------------------------------------------------
+	* Updated kernel from 2.6.37-5 to 2.6.37-6
+	* Based on new Yocto 1.2.2 (denzil)
+	* #102: [request] Add support for ntp, libfftw3, ppp scripts, mysql, php, phpmyadmin
+	* #103: [bug] iw package fails compilation
+
+---------------------------------------------------------
 --- igep_firmware-yocto-1.2.1-2 (released 2012-11-23) ---
 ---------------------------------------------------------
 	* Updated kernel from 2.6.37-4 to 2.6.37-5
