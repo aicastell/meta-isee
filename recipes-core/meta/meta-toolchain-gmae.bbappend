@@ -1,6 +1,6 @@
 require conf/distro/release.inc
 
-TOOLCHAIN_EXTRA_LIBS = "alsa-dev alsa-lib-dev libsdl-dev"
+TOOLCHAIN_EXTRA_LIBS = "alsa-dev alsa-lib-dev libsdl-dev fftw-dev"
 TOOLCHAIN_HOST_TASK = "task-qte-toolchain-host-nativesdk task-cross-canadian-${TRANSLATED_TARGET_ARCH}"
 TOOLCHAIN_TARGET_TASK = "${TOOLCHAIN_TARGET_GMAETASK} task-qte-toolchain-target ${TOOLCHAIN_EXTRA_LIBS}"
 TOOLCHAIN_OUTPUTNAME = "igep-sdk-yocto-toolchain-${SDK_VERSION}-${SDK_SUBVERSION}${EXTRAVERSION}"
