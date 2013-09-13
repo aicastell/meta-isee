@@ -7,7 +7,7 @@ Dependencies
 This layer depends on:
 
   URI: git://git.isee.biz/pub/scm/poky.git
-  branch: denzil
+  branch: danny
 
 Table of Contents
 =================
@@ -21,7 +21,7 @@ I. Building the meta-isee BSP layer
 In order to build an image with BSP support for a given release, you
 need to download the corresponding BSP repository.
 
-  $ git clone -b denzil git://git.isee.biz/pub/scm/poky.git
+  $ git clone -b danny git://git.isee.biz/pub/scm/poky.git
 
 Enter to the poky directory,
 
@@ -29,7 +29,7 @@ Enter to the poky directory,
 
 and clone the meta-isee layer.
 
-  $ git clone -b denzil git://git.isee.biz/pub/scm/meta-isee.git
+  $ git clone -b danny git://git.isee.biz/pub/scm/meta-isee.git
 
   $ source oe-init-build-env
 
