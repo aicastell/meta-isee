@@ -14,7 +14,7 @@ inherit update-rc.d
 INITSCRIPT_NAME = "igep-tools.sh"
 INITSCRIPT_PARAMS = "start 98 S ."
 
-SRC_URI = "git://git.isee.biz/pub/scm/igep-tools.git;protocol=git"
+SRC_URI = "git://git@git.isee.biz/igep-tools/igep-tools.git;protocol=ssh"
 
 do_compile() {
 	:
