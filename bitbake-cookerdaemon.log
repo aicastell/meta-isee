@@ -1,0 +1,552 @@
+--- Starting bitbake server pid 32028 at 2018-03-02 13:28:47.945006 ---
+Started bitbake server pid 32028
+DEBUG: Found bblayers.conf (/home/isee/yocto-project/build/conf/bblayers.conf)
+DEBUG: Adding layer /home/isee/yocto-project/meta
+DEBUG: Adding layer /home/isee/yocto-project/meta-poky
+DEBUG: Adding layer /home/isee/yocto-project/meta-yocto-bsp
+DEBUG: Adding layer /home/isee/yocto-project/meta-openembedded/meta-oe
+DEBUG: Adding layer /home/isee/yocto-project/meta-qt4
+DEBUG: Adding layer /home/isee/yocto-project/meta-isee
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:740: including conf/abi_version.conf
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:741: including conf/site.conf
+DEBUG: CONF file 'conf/site.conf' not found
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:742: including conf/auto.conf
+DEBUG: CONF file 'conf/auto.conf' not found
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:743: including conf/local.conf
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:744: including conf/multiconfig/default.conf
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:745: including conf/machine/igep00x0.conf
+DEBUG: CONF /home/isee/yocto-project/meta-isee/conf/machine/igep00x0.conf:22: including conf/machine/include/tune-cortexa8.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/tune-cortexa8.inc:3: including conf/machine/include/arm/arch-armv7a.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/arm/arch-armv7a.inc:8: including conf/machine/include/arm/arch-armv6.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/arm/arch-armv6.inc:8: including conf/machine/include/arm/arch-armv5-dsp.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/arm/arch-armv5-dsp.inc:4: including conf/machine/include/arm/arch-armv5.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/arm/arch-armv5.inc:8: including conf/machine/include/arm/arch-armv4.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/arm/arch-armv4.inc:15: including conf/machine/include/arm/arch-arm.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/arm/arch-armv4.inc:16: including conf/machine/include/arm/feature-arm-thumb.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/arm/arch-armv5.inc:9: including conf/machine/include/arm/feature-arm-vfp.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/arm/arch-armv7a.inc:9: including conf/machine/include/arm/feature-arm-neon.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:746: including conf/machine-sdk/x86_64.conf
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:747: including conf/distro/poky.conf
+DEBUG: CONF /home/isee/yocto-project/meta-poky/conf/distro/poky.conf:101: including conf/distro/include/poky-world-exclude.inc
+DEBUG: CONF /home/isee/yocto-project/meta-poky/conf/distro/poky.conf:102: including conf/distro/include/no-static-libs.inc
+DEBUG: CONF /home/isee/yocto-project/meta-poky/conf/distro/poky.conf:103: including conf/distro/include/yocto-uninative.inc
+Entering server connection loop
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:748: including conf/distro/defaultsetup.conf
+DEBUG: CONF /home/isee/yocto-project/meta/conf/distro/defaultsetup.conf:1: including conf/distro/include/default-providers.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/distro/defaultsetup.conf:2: including conf/distro/include/default-versions.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/distro/defaultsetup.conf:3: including conf/distro/include/default-distrovars.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/distro/defaultsetup.conf:4: including conf/distro/include/world-broken.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/distro/defaultsetup.conf:7: including conf/distro/include/tcmode-default.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/distro/include/tcmode-default.inc:71: including conf/distro/include/as-needed.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/distro/defaultsetup.conf:10: including conf/distro/include/tclibc-glibc.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/distro/defaultsetup.conf:12: including conf/distro/include/uninative-flags.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:749: including conf/documentation.conf
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:750: including conf/licenses.conf
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:751: including conf/sanity.conf
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/base.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/patch.bbclass (from /home/isee/yocto-project/meta/classes/base.bbclass:4)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/terminal.bbclass (from /home/isee/yocto-project/meta/classes/patch.bbclass:11)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/staging.bbclass (from /home/isee/yocto-project/meta/classes/base.bbclass:5)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/mirrors.bbclass (from /home/isee/yocto-project/meta/classes/base.bbclass:7)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/utils.bbclass (from /home/isee/yocto-project/meta/classes/base.bbclass:8)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/utility-tasks.bbclass (from /home/isee/yocto-project/meta/classes/base.bbclass:9)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/metadata_scm.bbclass (from /home/isee/yocto-project/meta/classes/base.bbclass:10)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/logging.bbclass (from /home/isee/yocto-project/meta/classes/base.bbclass:11)
+DEBUG: Inheriting /home/isee/yocto-project/meta-poky/classes/poky-sanity.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/uninative.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/package_rpm.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/package.bbclass (from /home/isee/yocto-project/meta/classes/package_rpm.bbclass:1)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/packagedata.bbclass (from /home/isee/yocto-project/meta/classes/package.bbclass:41)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/chrpath.bbclass (from /home/isee/yocto-project/meta/classes/package.bbclass:42)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/insane.bbclass (from /home/isee/yocto-project/meta/classes/package.bbclass:45)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/buildstats.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/image-mklibs.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/linuxloader.bbclass (from /home/isee/yocto-project/meta/classes/image-mklibs.bbclass:5)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/image-prelink.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/debian.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/devshell.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/sstate.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/license.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/remove-libtool.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/blacklist.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/sanity.bbclass (from configuration INHERITs:0)
+DEBUG: Clearing SRCREV cache due to cache policy of: clear
+DEBUG: Using cache in '/home/isee/yocto-project/build/cache/local_file_checksum_cache.dat'
+DEBUG: Using cache in '/home/isee/yocto-project/build/cache/bb_codeparser.dat'
+DEBUG: Enabling uninative
+Accepting [<socket.socket fd=7, family=AddressFamily.AF_UNIX, type=SocketKind.SOCK_STREAM, proto=0, laddr=bitbake.sock>]
+Connecting Client
+Running command ['setFeatures', [2]]
+Running command ['updateConfig', {'abort': True, 'debug': 0, 'prefile': [], 'force': False, 'invalidate_stamp': None, 'dump_signatures': [], 'server_timeout': None, 'profile': False, 'extra_assume_provided': [], 'postfile': [], 'dry_run': False, 'verbose': False, 'debug_domains': []}, {'LC_PAPER': 'es_ES.UTF-8', 'SSH_TTY': '/dev/pts/1', 'LANGUAGE': 'en_US:en', 'HOME': '/home/isee', 'LC_IDENTIFICATION': 'es_ES.UTF-8', 'LOGNAME': 'isee', 'LC_NAME': 'es_ES.UTF-8', 'LC_NUMERIC': 'es_ES.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'SSH_CLIENT': '85.62.58.93 42626 22', 'XDG_SESSION_ID': '19', 'LC_MEASUREMENT': 'es_ES.UTF-8', 'USER': 'isee', '_': '/home/isee/yocto-project/bitbake/bin/bitbake', 'MAIL': '/var/mail/isee', 'OLDPWD': '/home/isee/yocto-project', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'LC_ALL': 'en_US.UTF-8', 'LANG': 'en_US.UTF-8', 'PATH': '/home/isee/yocto-project/scripts:/home/isee/yocto-project/bitbake/bin:/home/isee/bin:/home/isee/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SHLVL': '1', 'SSH_CONNECTION': '85.62.58.93 42626 10.10.10.2 22', 'LC_ADDRESS': 'es_ES.UTF-8', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'LC_MONETARY': 'es_ES.UTF-8', 'BB_ENV_EXTRAWHITE': 'ALL_PROXY BBPATH_EXTRA BB_NO_NETWORK BB_NUMBER_THREADS BB_SETSCENE_ENFORCE BB_SRCREV_POLICY DISTRO FTPS_PROXY FTP_PROXY GIT_PROXY_COMMAND HTTPS_PROXY HTTP_PROXY MACHINE NO_PROXY PARALLEL_MAKE SCREENDIR SDKMACHINE SOCKS5_PASSWD SOCKS5_USER SSH_AGENT_PID SSH_AUTH_SOCK STAMPS_DIR TCLIBC TCMODE all_proxy ftp_proxy ftps_proxy http_proxy https_proxy no_proxy ', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_TIME': 'es_ES.UTF-8', 'BBPATH': '/home/isee/yocto-project/build', 'TERM': 'xterm-256color', 'PWD': '/home/isee/yocto-project/meta-isee', 'SHELL': '/bin/bash', 'LC_TELEPHONE': 'es_ES.UTF-8', 'BUILDDIR': '/home/isee/yocto-project/build'}, ['/home/isee/yocto-project/bitbake/bin/bitbake', '-c', 'cleanall', 'linux-igep']]
+Running command ['getVariable', 'BBINCLUDELOGS']
+Running command ['getVariable', 'BBINCLUDELOGS_LINES']
+Running command ['getSetVariable', 'BB_CONSOLELOG']
+Running command ['getUIHandlerNum']
+Running command ['setEventMask', 1, 20, {}, ['bb.runqueue.runQueueExitWait', 'bb.event.LogExecTTY', 'logging.LogRecord', 'bb.build.TaskFailed', 'bb.build.TaskBase', 'bb.event.ParseStarted', 'bb.event.ParseProgress', 'bb.event.ParseCompleted', 'bb.event.CacheLoadStarted', 'bb.event.CacheLoadProgress', 'bb.event.CacheLoadCompleted', 'bb.command.CommandFailed', 'bb.command.CommandExit', 'bb.command.CommandCompleted', 'bb.cooker.CookerExit', 'bb.event.MultipleProviders', 'bb.event.NoProvider', 'bb.runqueue.sceneQueueTaskStarted', 'bb.runqueue.runQueueTaskStarted', 'bb.runqueue.runQueueTaskFailed', 'bb.runqueue.sceneQueueTaskFailed', 'bb.event.BuildBase', 'bb.build.TaskStarted', 'bb.build.TaskSucceeded', 'bb.build.TaskFailedSilent', 'bb.build.TaskProgress', 'bb.event.ProcessStarted', 'bb.event.ProcessProgress', 'bb.event.ProcessFinished']]
+Running command ['setConfig', 'cmd', 'cleanall']
+Running command ['buildTargets', ['linux-igep'], 'cleanall']
+Connecting Client
+Disconnecting Client
+No timeout, exiting.
+Exiting
+--- Starting bitbake server pid 32067 at 2018-03-02 13:30:21.706552 ---
+Started bitbake server pid 32067
+DEBUG: Found bblayers.conf (/home/isee/yocto-project/build/conf/bblayers.conf)
+DEBUG: Adding layer /home/isee/yocto-project/meta
+DEBUG: Adding layer /home/isee/yocto-project/meta-poky
+DEBUG: Adding layer /home/isee/yocto-project/meta-yocto-bsp
+DEBUG: Adding layer /home/isee/yocto-project/meta-openembedded/meta-oe
+DEBUG: Adding layer /home/isee/yocto-project/meta-qt4
+DEBUG: Adding layer /home/isee/yocto-project/meta-isee
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:740: including conf/abi_version.conf
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:741: including conf/site.conf
+DEBUG: CONF file 'conf/site.conf' not found
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:742: including conf/auto.conf
+DEBUG: CONF file 'conf/auto.conf' not found
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:743: including conf/local.conf
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:744: including conf/multiconfig/default.conf
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:745: including conf/machine/igep00x0.conf
+DEBUG: CONF /home/isee/yocto-project/meta-isee/conf/machine/igep00x0.conf:22: including conf/machine/include/tune-cortexa8.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/tune-cortexa8.inc:3: including conf/machine/include/arm/arch-armv7a.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/arm/arch-armv7a.inc:8: including conf/machine/include/arm/arch-armv6.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/arm/arch-armv6.inc:8: including conf/machine/include/arm/arch-armv5-dsp.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/arm/arch-armv5-dsp.inc:4: including conf/machine/include/arm/arch-armv5.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/arm/arch-armv5.inc:8: including conf/machine/include/arm/arch-armv4.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/arm/arch-armv4.inc:15: including conf/machine/include/arm/arch-arm.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/arm/arch-armv4.inc:16: including conf/machine/include/arm/feature-arm-thumb.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/arm/arch-armv5.inc:9: including conf/machine/include/arm/feature-arm-vfp.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/arm/arch-armv7a.inc:9: including conf/machine/include/arm/feature-arm-neon.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:746: including conf/machine-sdk/x86_64.conf
+Entering server connection loop
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:747: including conf/distro/poky.conf
+DEBUG: CONF /home/isee/yocto-project/meta-poky/conf/distro/poky.conf:101: including conf/distro/include/poky-world-exclude.inc
+DEBUG: CONF /home/isee/yocto-project/meta-poky/conf/distro/poky.conf:102: including conf/distro/include/no-static-libs.inc
+DEBUG: CONF /home/isee/yocto-project/meta-poky/conf/distro/poky.conf:103: including conf/distro/include/yocto-uninative.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:748: including conf/distro/defaultsetup.conf
+DEBUG: CONF /home/isee/yocto-project/meta/conf/distro/defaultsetup.conf:1: including conf/distro/include/default-providers.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/distro/defaultsetup.conf:2: including conf/distro/include/default-versions.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/distro/defaultsetup.conf:3: including conf/distro/include/default-distrovars.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/distro/defaultsetup.conf:4: including conf/distro/include/world-broken.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/distro/defaultsetup.conf:7: including conf/distro/include/tcmode-default.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/distro/include/tcmode-default.inc:71: including conf/distro/include/as-needed.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/distro/defaultsetup.conf:10: including conf/distro/include/tclibc-glibc.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/distro/defaultsetup.conf:12: including conf/distro/include/uninative-flags.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:749: including conf/documentation.conf
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:750: including conf/licenses.conf
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:751: including conf/sanity.conf
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/base.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/patch.bbclass (from /home/isee/yocto-project/meta/classes/base.bbclass:4)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/terminal.bbclass (from /home/isee/yocto-project/meta/classes/patch.bbclass:11)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/staging.bbclass (from /home/isee/yocto-project/meta/classes/base.bbclass:5)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/mirrors.bbclass (from /home/isee/yocto-project/meta/classes/base.bbclass:7)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/utils.bbclass (from /home/isee/yocto-project/meta/classes/base.bbclass:8)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/utility-tasks.bbclass (from /home/isee/yocto-project/meta/classes/base.bbclass:9)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/metadata_scm.bbclass (from /home/isee/yocto-project/meta/classes/base.bbclass:10)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/logging.bbclass (from /home/isee/yocto-project/meta/classes/base.bbclass:11)
+DEBUG: Inheriting /home/isee/yocto-project/meta-poky/classes/poky-sanity.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/uninative.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/package_rpm.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/package.bbclass (from /home/isee/yocto-project/meta/classes/package_rpm.bbclass:1)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/packagedata.bbclass (from /home/isee/yocto-project/meta/classes/package.bbclass:41)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/chrpath.bbclass (from /home/isee/yocto-project/meta/classes/package.bbclass:42)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/insane.bbclass (from /home/isee/yocto-project/meta/classes/package.bbclass:45)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/buildstats.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/image-mklibs.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/linuxloader.bbclass (from /home/isee/yocto-project/meta/classes/image-mklibs.bbclass:5)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/image-prelink.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/debian.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/devshell.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/sstate.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/license.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/remove-libtool.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/blacklist.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/sanity.bbclass (from configuration INHERITs:0)
+DEBUG: Clearing SRCREV cache due to cache policy of: clear
+DEBUG: Using cache in '/home/isee/yocto-project/build/cache/local_file_checksum_cache.dat'
+DEBUG: Using cache in '/home/isee/yocto-project/build/cache/bb_codeparser.dat'
+DEBUG: Enabling uninative
+Accepting [<socket.socket fd=7, family=AddressFamily.AF_UNIX, type=SocketKind.SOCK_STREAM, proto=0, laddr=bitbake.sock>]
+Connecting Client
+Running command ['setFeatures', [2]]
+Running command ['updateConfig', {'dry_run': False, 'invalidate_stamp': None, 'debug_domains': [], 'force': False, 'verbose': False, 'abort': True, 'prefile': [], 'profile': False, 'extra_assume_provided': [], 'dump_signatures': [], 'debug': 0, 'server_timeout': None, 'postfile': []}, {'USER': 'isee', 'LC_ALL': 'en_US.UTF-8', 'LC_NAME': 'es_ES.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SHLVL': '1', 'PWD': '/home/isee/yocto-project/meta-isee', 'SSH_CLIENT': '85.62.58.93 42626 22', 'LC_PAPER': 'es_ES.UTF-8', 'SSH_CONNECTION': '85.62.58.93 42626 10.10.10.2 22', 'LANG': 'en_US.UTF-8', 'LC_MEASUREMENT': 'es_ES.UTF-8', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'BBPATH': '/home/isee/yocto-project/build', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'PATH': '/home/isee/yocto-project/scripts:/home/isee/yocto-project/bitbake/bin:/home/isee/bin:/home/isee/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LOGNAME': 'isee', 'HOME': '/home/isee', 'TERM': 'xterm-256color', 'MAIL': '/var/mail/isee', '_': '/home/isee/yocto-project/bitbake/bin/bitbake', 'SHELL': '/bin/bash', 'LC_MONETARY': 'es_ES.UTF-8', 'OLDPWD': '/home/isee/yocto-project', 'LC_IDENTIFICATION': 'es_ES.UTF-8', 'LANGUAGE': 'en_US:en', 'XDG_SESSION_ID': '19', 'LC_TELEPHONE': 'es_ES.UTF-8', 'BUILDDIR': '/home/isee/yocto-project/build', 'LC_ADDRESS': 'es_ES.UTF-8', 'LC_NUMERIC': 'es_ES.UTF-8', 'SSH_TTY': '/dev/pts/1', 'LC_TIME': 'es_ES.UTF-8', 'BB_ENV_EXTRAWHITE': 'ALL_PROXY BBPATH_EXTRA BB_NO_NETWORK BB_NUMBER_THREADS BB_SETSCENE_ENFORCE BB_SRCREV_POLICY DISTRO FTPS_PROXY FTP_PROXY GIT_PROXY_COMMAND HTTPS_PROXY HTTP_PROXY MACHINE NO_PROXY PARALLEL_MAKE SCREENDIR SDKMACHINE SOCKS5_PASSWD SOCKS5_USER SSH_AGENT_PID SSH_AUTH_SOCK STAMPS_DIR TCLIBC TCMODE all_proxy ftp_proxy ftps_proxy http_proxy https_proxy no_proxy '}, ['/home/isee/yocto-project/bitbake/bin/bitbake', '-c', 'cleanall', 'linux-igep']]
+Running command ['getVariable', 'BBINCLUDELOGS']
+Running command ['getVariable', 'BBINCLUDELOGS_LINES']
+Running command ['getSetVariable', 'BB_CONSOLELOG']
+Running command ['getUIHandlerNum']
+Running command ['setEventMask', 1, 20, {}, ['bb.runqueue.runQueueExitWait', 'bb.event.LogExecTTY', 'logging.LogRecord', 'bb.build.TaskFailed', 'bb.build.TaskBase', 'bb.event.ParseStarted', 'bb.event.ParseProgress', 'bb.event.ParseCompleted', 'bb.event.CacheLoadStarted', 'bb.event.CacheLoadProgress', 'bb.event.CacheLoadCompleted', 'bb.command.CommandFailed', 'bb.command.CommandExit', 'bb.command.CommandCompleted', 'bb.cooker.CookerExit', 'bb.event.MultipleProviders', 'bb.event.NoProvider', 'bb.runqueue.sceneQueueTaskStarted', 'bb.runqueue.runQueueTaskStarted', 'bb.runqueue.runQueueTaskFailed', 'bb.runqueue.sceneQueueTaskFailed', 'bb.event.BuildBase', 'bb.build.TaskStarted', 'bb.build.TaskSucceeded', 'bb.build.TaskFailedSilent', 'bb.build.TaskProgress', 'bb.event.ProcessStarted', 'bb.event.ProcessProgress', 'bb.event.ProcessFinished']]
+Running command ['setConfig', 'cmd', 'cleanall']
+Running command ['buildTargets', ['linux-igep'], 'cleanall']
+Connecting Client
+Disconnecting Client
+No timeout, exiting.
+Exiting
+--- Starting bitbake server pid 32126 at 2018-03-02 13:30:35.372880 ---
+Started bitbake server pid 32126
+DEBUG: Found bblayers.conf (/home/isee/yocto-project/build/conf/bblayers.conf)
+DEBUG: Adding layer /home/isee/yocto-project/meta
+DEBUG: Adding layer /home/isee/yocto-project/meta-poky
+DEBUG: Adding layer /home/isee/yocto-project/meta-yocto-bsp
+DEBUG: Adding layer /home/isee/yocto-project/meta-openembedded/meta-oe
+DEBUG: Adding layer /home/isee/yocto-project/meta-qt4
+DEBUG: Adding layer /home/isee/yocto-project/meta-isee
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:740: including conf/abi_version.conf
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:741: including conf/site.conf
+DEBUG: CONF file 'conf/site.conf' not found
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:742: including conf/auto.conf
+DEBUG: CONF file 'conf/auto.conf' not found
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:743: including conf/local.conf
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:744: including conf/multiconfig/default.conf
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:745: including conf/machine/igep00x0.conf
+DEBUG: CONF /home/isee/yocto-project/meta-isee/conf/machine/igep00x0.conf:22: including conf/machine/include/tune-cortexa8.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/tune-cortexa8.inc:3: including conf/machine/include/arm/arch-armv7a.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/arm/arch-armv7a.inc:8: including conf/machine/include/arm/arch-armv6.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/arm/arch-armv6.inc:8: including conf/machine/include/arm/arch-armv5-dsp.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/arm/arch-armv5-dsp.inc:4: including conf/machine/include/arm/arch-armv5.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/arm/arch-armv5.inc:8: including conf/machine/include/arm/arch-armv4.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/arm/arch-armv4.inc:15: including conf/machine/include/arm/arch-arm.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/arm/arch-armv4.inc:16: including conf/machine/include/arm/feature-arm-thumb.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/arm/arch-armv5.inc:9: including conf/machine/include/arm/feature-arm-vfp.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/arm/arch-armv7a.inc:9: including conf/machine/include/arm/feature-arm-neon.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:746: including conf/machine-sdk/x86_64.conf
+Entering server connection loop
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:747: including conf/distro/poky.conf
+DEBUG: CONF /home/isee/yocto-project/meta-poky/conf/distro/poky.conf:101: including conf/distro/include/poky-world-exclude.inc
+DEBUG: CONF /home/isee/yocto-project/meta-poky/conf/distro/poky.conf:102: including conf/distro/include/no-static-libs.inc
+DEBUG: CONF /home/isee/yocto-project/meta-poky/conf/distro/poky.conf:103: including conf/distro/include/yocto-uninative.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:748: including conf/distro/defaultsetup.conf
+DEBUG: CONF /home/isee/yocto-project/meta/conf/distro/defaultsetup.conf:1: including conf/distro/include/default-providers.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/distro/defaultsetup.conf:2: including conf/distro/include/default-versions.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/distro/defaultsetup.conf:3: including conf/distro/include/default-distrovars.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/distro/defaultsetup.conf:4: including conf/distro/include/world-broken.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/distro/defaultsetup.conf:7: including conf/distro/include/tcmode-default.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/distro/include/tcmode-default.inc:71: including conf/distro/include/as-needed.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/distro/defaultsetup.conf:10: including conf/distro/include/tclibc-glibc.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/distro/defaultsetup.conf:12: including conf/distro/include/uninative-flags.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:749: including conf/documentation.conf
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:750: including conf/licenses.conf
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:751: including conf/sanity.conf
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/base.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/patch.bbclass (from /home/isee/yocto-project/meta/classes/base.bbclass:4)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/terminal.bbclass (from /home/isee/yocto-project/meta/classes/patch.bbclass:11)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/staging.bbclass (from /home/isee/yocto-project/meta/classes/base.bbclass:5)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/mirrors.bbclass (from /home/isee/yocto-project/meta/classes/base.bbclass:7)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/utils.bbclass (from /home/isee/yocto-project/meta/classes/base.bbclass:8)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/utility-tasks.bbclass (from /home/isee/yocto-project/meta/classes/base.bbclass:9)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/metadata_scm.bbclass (from /home/isee/yocto-project/meta/classes/base.bbclass:10)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/logging.bbclass (from /home/isee/yocto-project/meta/classes/base.bbclass:11)
+DEBUG: Inheriting /home/isee/yocto-project/meta-poky/classes/poky-sanity.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/uninative.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/package_rpm.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/package.bbclass (from /home/isee/yocto-project/meta/classes/package_rpm.bbclass:1)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/packagedata.bbclass (from /home/isee/yocto-project/meta/classes/package.bbclass:41)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/chrpath.bbclass (from /home/isee/yocto-project/meta/classes/package.bbclass:42)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/insane.bbclass (from /home/isee/yocto-project/meta/classes/package.bbclass:45)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/buildstats.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/image-mklibs.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/linuxloader.bbclass (from /home/isee/yocto-project/meta/classes/image-mklibs.bbclass:5)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/image-prelink.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/debian.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/devshell.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/sstate.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/license.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/remove-libtool.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/blacklist.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/sanity.bbclass (from configuration INHERITs:0)
+DEBUG: Clearing SRCREV cache due to cache policy of: clear
+DEBUG: Using cache in '/home/isee/yocto-project/build/cache/local_file_checksum_cache.dat'
+DEBUG: Using cache in '/home/isee/yocto-project/build/cache/bb_codeparser.dat'
+DEBUG: Enabling uninative
+Accepting [<socket.socket fd=7, family=AddressFamily.AF_UNIX, type=SocketKind.SOCK_STREAM, proto=0, laddr=bitbake.sock>]
+Connecting Client
+Running command ['setFeatures', [2]]
+Running command ['updateConfig', {'debug': 3, 'verbose': True, 'server_timeout': None, 'prefile': [], 'abort': True, 'dry_run': False, 'force': False, 'invalidate_stamp': None, 'dump_signatures': [], 'debug_domains': [], 'postfile': [], 'extra_assume_provided': [], 'profile': False}, {'LC_PAPER': 'es_ES.UTF-8', 'SHLVL': '1', 'LOGNAME': 'isee', 'BBPATH': '/home/isee/yocto-project/build', 'LC_TELEPHONE': 'es_ES.UTF-8', 'BUILDDIR': '/home/isee/yocto-project/build', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LC_MONETARY': 'es_ES.UTF-8', 'SHELL': '/bin/bash', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'LANG': 'en_US.UTF-8', 'PATH': '/home/isee/yocto-project/scripts:/home/isee/yocto-project/bitbake/bin:/home/isee/bin:/home/isee/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', '_': '/home/isee/yocto-project/bitbake/bin/bitbake', 'BB_ENV_EXTRAWHITE': 'ALL_PROXY BBPATH_EXTRA BB_NO_NETWORK BB_NUMBER_THREADS BB_SETSCENE_ENFORCE BB_SRCREV_POLICY DISTRO FTPS_PROXY FTP_PROXY GIT_PROXY_COMMAND HTTPS_PROXY HTTP_PROXY MACHINE NO_PROXY PARALLEL_MAKE SCREENDIR SDKMACHINE SOCKS5_PASSWD SOCKS5_USER SSH_AGENT_PID SSH_AUTH_SOCK STAMPS_DIR TCLIBC TCMODE all_proxy ftp_proxy ftps_proxy http_proxy https_proxy no_proxy ', 'XDG_SESSION_ID': '19', 'TERM': 'xterm-256color', 'HOME': '/home/isee', 'LC_NAME': 'es_ES.UTF-8', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'MAIL': '/var/mail/isee', 'LC_ALL': 'en_US.UTF-8', 'LC_ADDRESS': 'es_ES.UTF-8', 'LANGUAGE': 'en_US:en', 'OLDPWD': '/home/isee/yocto-project', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_TIME': 'es_ES.UTF-8', 'LC_MEASUREMENT': 'es_ES.UTF-8', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'SSH_CLIENT': '85.62.58.93 42626 22', 'SSH_CONNECTION': '85.62.58.93 42626 10.10.10.2 22', 'LC_NUMERIC': 'es_ES.UTF-8', 'USER': 'isee', 'PWD': '/home/isee/yocto-project/meta-isee', 'SSH_TTY': '/dev/pts/1', 'LC_IDENTIFICATION': 'es_ES.UTF-8'}, ['/home/isee/yocto-project/bitbake/bin/bitbake', 'linux-igep', '-vDDD']]
+Running command ['getVariable', 'BBINCLUDELOGS']
+Running command ['getVariable', 'BBINCLUDELOGS_LINES']
+Running command ['getSetVariable', 'BB_CONSOLELOG']
+Running command ['getUIHandlerNum']
+Running command ['setEventMask', 1, 8, {}, ['bb.runqueue.runQueueExitWait', 'bb.event.LogExecTTY', 'logging.LogRecord', 'bb.build.TaskFailed', 'bb.build.TaskBase', 'bb.event.ParseStarted', 'bb.event.ParseProgress', 'bb.event.ParseCompleted', 'bb.event.CacheLoadStarted', 'bb.event.CacheLoadProgress', 'bb.event.CacheLoadCompleted', 'bb.command.CommandFailed', 'bb.command.CommandExit', 'bb.command.CommandCompleted', 'bb.cooker.CookerExit', 'bb.event.MultipleProviders', 'bb.event.NoProvider', 'bb.runqueue.sceneQueueTaskStarted', 'bb.runqueue.runQueueTaskStarted', 'bb.runqueue.runQueueTaskFailed', 'bb.runqueue.sceneQueueTaskFailed', 'bb.event.BuildBase', 'bb.build.TaskStarted', 'bb.build.TaskSucceeded', 'bb.build.TaskFailedSilent', 'bb.build.TaskProgress', 'bb.event.ProcessStarted', 'bb.event.ProcessProgress', 'bb.event.ProcessFinished']]
+Running command ['getVariable', 'BB_DEFAULT_TASK']
+Running command ['setConfig', 'cmd', 'build']
+Running command ['buildTargets', ['linux-igep'], 'build']
+Connecting Client
+Disconnecting Client
+No timeout, exiting.
+Exiting
+--- Starting bitbake server pid 306 at 2018-03-02 13:38:20.924843 ---
+Started bitbake server pid 306
+DEBUG: Found bblayers.conf (/home/isee/yocto-project/build/conf/bblayers.conf)
+DEBUG: Adding layer /home/isee/yocto-project/meta
+DEBUG: Adding layer /home/isee/yocto-project/meta-poky
+DEBUG: Adding layer /home/isee/yocto-project/meta-yocto-bsp
+DEBUG: Adding layer /home/isee/yocto-project/meta-openembedded/meta-oe
+DEBUG: Adding layer /home/isee/yocto-project/meta-qt4
+DEBUG: Adding layer /home/isee/yocto-project/meta-isee
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:740: including conf/abi_version.conf
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:741: including conf/site.conf
+DEBUG: CONF file 'conf/site.conf' not found
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:742: including conf/auto.conf
+DEBUG: CONF file 'conf/auto.conf' not found
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:743: including conf/local.conf
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:744: including conf/multiconfig/default.conf
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:745: including conf/machine/igep00x0.conf
+DEBUG: CONF /home/isee/yocto-project/meta-isee/conf/machine/igep00x0.conf:22: including conf/machine/include/tune-cortexa8.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/tune-cortexa8.inc:3: including conf/machine/include/arm/arch-armv7a.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/arm/arch-armv7a.inc:8: including conf/machine/include/arm/arch-armv6.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/arm/arch-armv6.inc:8: including conf/machine/include/arm/arch-armv5-dsp.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/arm/arch-armv5-dsp.inc:4: including conf/machine/include/arm/arch-armv5.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/arm/arch-armv5.inc:8: including conf/machine/include/arm/arch-armv4.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/arm/arch-armv4.inc:15: including conf/machine/include/arm/arch-arm.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/arm/arch-armv4.inc:16: including conf/machine/include/arm/feature-arm-thumb.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/arm/arch-armv5.inc:9: including conf/machine/include/arm/feature-arm-vfp.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/arm/arch-armv7a.inc:9: including conf/machine/include/arm/feature-arm-neon.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:746: including conf/machine-sdk/x86_64.conf
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:747: including conf/distro/poky.conf
+DEBUG: CONF /home/isee/yocto-project/meta-poky/conf/distro/poky.conf:101: including conf/distro/include/poky-world-exclude.inc
+DEBUG: CONF /home/isee/yocto-project/meta-poky/conf/distro/poky.conf:102: including conf/distro/include/no-static-libs.inc
+DEBUG: CONF /home/isee/yocto-project/meta-poky/conf/distro/poky.conf:103: including conf/distro/include/yocto-uninative.inc
+Entering server connection loop
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:748: including conf/distro/defaultsetup.conf
+DEBUG: CONF /home/isee/yocto-project/meta/conf/distro/defaultsetup.conf:1: including conf/distro/include/default-providers.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/distro/defaultsetup.conf:2: including conf/distro/include/default-versions.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/distro/defaultsetup.conf:3: including conf/distro/include/default-distrovars.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/distro/defaultsetup.conf:4: including conf/distro/include/world-broken.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/distro/defaultsetup.conf:7: including conf/distro/include/tcmode-default.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/distro/include/tcmode-default.inc:71: including conf/distro/include/as-needed.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/distro/defaultsetup.conf:10: including conf/distro/include/tclibc-glibc.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/distro/defaultsetup.conf:12: including conf/distro/include/uninative-flags.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:749: including conf/documentation.conf
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:750: including conf/licenses.conf
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:751: including conf/sanity.conf
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/base.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/patch.bbclass (from /home/isee/yocto-project/meta/classes/base.bbclass:4)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/terminal.bbclass (from /home/isee/yocto-project/meta/classes/patch.bbclass:11)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/staging.bbclass (from /home/isee/yocto-project/meta/classes/base.bbclass:5)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/mirrors.bbclass (from /home/isee/yocto-project/meta/classes/base.bbclass:7)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/utils.bbclass (from /home/isee/yocto-project/meta/classes/base.bbclass:8)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/utility-tasks.bbclass (from /home/isee/yocto-project/meta/classes/base.bbclass:9)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/metadata_scm.bbclass (from /home/isee/yocto-project/meta/classes/base.bbclass:10)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/logging.bbclass (from /home/isee/yocto-project/meta/classes/base.bbclass:11)
+DEBUG: Inheriting /home/isee/yocto-project/meta-poky/classes/poky-sanity.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/uninative.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/package_rpm.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/package.bbclass (from /home/isee/yocto-project/meta/classes/package_rpm.bbclass:1)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/packagedata.bbclass (from /home/isee/yocto-project/meta/classes/package.bbclass:41)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/chrpath.bbclass (from /home/isee/yocto-project/meta/classes/package.bbclass:42)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/insane.bbclass (from /home/isee/yocto-project/meta/classes/package.bbclass:45)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/buildstats.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/image-mklibs.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/linuxloader.bbclass (from /home/isee/yocto-project/meta/classes/image-mklibs.bbclass:5)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/image-prelink.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/debian.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/devshell.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/sstate.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/license.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/remove-libtool.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/blacklist.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/sanity.bbclass (from configuration INHERITs:0)
+DEBUG: Clearing SRCREV cache due to cache policy of: clear
+DEBUG: Using cache in '/home/isee/yocto-project/build/cache/local_file_checksum_cache.dat'
+DEBUG: Using cache in '/home/isee/yocto-project/build/cache/bb_codeparser.dat'
+DEBUG: Enabling uninative
+Accepting [<socket.socket fd=7, family=AddressFamily.AF_UNIX, type=SocketKind.SOCK_STREAM, proto=0, laddr=bitbake.sock>]
+Connecting Client
+Running command ['setFeatures', [2]]
+Running command ['updateConfig', {'force': False, 'verbose': True, 'dump_signatures': [], 'postfile': [], 'abort': True, 'extra_assume_provided': [], 'profile': False, 'debug_domains': [], 'prefile': [], 'debug': 3, 'server_timeout': None, 'dry_run': False, 'invalidate_stamp': None}, {'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'LC_TELEPHONE': 'es_ES.UTF-8', 'LC_NUMERIC': 'es_ES.UTF-8', 'SHELL': '/bin/bash', 'BUILDDIR': '/home/isee/yocto-project/build', 'XDG_SESSION_ID': '19', 'HOME': '/home/isee', 'SSH_TTY': '/dev/pts/1', 'BB_ENV_EXTRAWHITE': 'ALL_PROXY BBPATH_EXTRA BB_NO_NETWORK BB_NUMBER_THREADS BB_SETSCENE_ENFORCE BB_SRCREV_POLICY DISTRO FTPS_PROXY FTP_PROXY GIT_PROXY_COMMAND HTTPS_PROXY HTTP_PROXY MACHINE NO_PROXY PARALLEL_MAKE SCREENDIR SDKMACHINE SOCKS5_PASSWD SOCKS5_USER SSH_AGENT_PID SSH_AUTH_SOCK STAMPS_DIR TCLIBC TCMODE all_proxy ftp_proxy ftps_proxy http_proxy https_proxy no_proxy ', 'SSH_CLIENT': '85.62.58.93 42626 22', 'PWD': '/home/isee/yocto-project/meta-isee', 'LC_MONETARY': 'es_ES.UTF-8', 'USER': 'isee', 'LC_IDENTIFICATION': 'es_ES.UTF-8', 'LC_PAPER': 'es_ES.UTF-8', 'SHLVL': '1', 'LC_ALL': 'en_US.UTF-8', 'PATH': '/home/isee/yocto-project/scripts:/home/isee/yocto-project/bitbake/bin:/home/isee/bin:/home/isee/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'BBPATH': '/home/isee/yocto-project/build', 'LOGNAME': 'isee', 'LANG': 'en_US.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSH_CONNECTION': '85.62.58.93 42626 10.10.10.2 22', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LANGUAGE': 'en_US:en', '_': '/home/isee/yocto-project/bitbake/bin/bitbake', 'LC_ADDRESS': 'es_ES.UTF-8', 'OLDPWD': '/home/isee/yocto-project', 'TERM': 'xterm-256color', 'LC_TIME': 'es_ES.UTF-8', 'LC_MEASUREMENT': 'es_ES.UTF-8', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'MAIL': '/var/mail/isee', 'LC_NAME': 'es_ES.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'}, ['/home/isee/yocto-project/bitbake/bin/bitbake', 'linux-igep', '-vDDD']]
+Running command ['getVariable', 'BBINCLUDELOGS']
+Running command ['getVariable', 'BBINCLUDELOGS_LINES']
+Running command ['getSetVariable', 'BB_CONSOLELOG']
+Running command ['getUIHandlerNum']
+Running command ['setEventMask', 1, 8, {}, ['bb.runqueue.runQueueExitWait', 'bb.event.LogExecTTY', 'logging.LogRecord', 'bb.build.TaskFailed', 'bb.build.TaskBase', 'bb.event.ParseStarted', 'bb.event.ParseProgress', 'bb.event.ParseCompleted', 'bb.event.CacheLoadStarted', 'bb.event.CacheLoadProgress', 'bb.event.CacheLoadCompleted', 'bb.command.CommandFailed', 'bb.command.CommandExit', 'bb.command.CommandCompleted', 'bb.cooker.CookerExit', 'bb.event.MultipleProviders', 'bb.event.NoProvider', 'bb.runqueue.sceneQueueTaskStarted', 'bb.runqueue.runQueueTaskStarted', 'bb.runqueue.runQueueTaskFailed', 'bb.runqueue.sceneQueueTaskFailed', 'bb.event.BuildBase', 'bb.build.TaskStarted', 'bb.build.TaskSucceeded', 'bb.build.TaskFailedSilent', 'bb.build.TaskProgress', 'bb.event.ProcessStarted', 'bb.event.ProcessProgress', 'bb.event.ProcessFinished']]
+Running command ['getVariable', 'BB_DEFAULT_TASK']
+Running command ['setConfig', 'cmd', 'build']
+Running command ['buildTargets', ['linux-igep'], 'build']
+Connecting Client
+Disconnecting Client
+No timeout, exiting.
+Exiting
+--- Starting bitbake server pid 328 at 2018-03-02 13:38:32.589688 ---
+Started bitbake server pid 328
+DEBUG: Found bblayers.conf (/home/isee/yocto-project/build/conf/bblayers.conf)
+DEBUG: Adding layer /home/isee/yocto-project/meta
+DEBUG: Adding layer /home/isee/yocto-project/meta-poky
+DEBUG: Adding layer /home/isee/yocto-project/meta-yocto-bsp
+DEBUG: Adding layer /home/isee/yocto-project/meta-openembedded/meta-oe
+DEBUG: Adding layer /home/isee/yocto-project/meta-qt4
+DEBUG: Adding layer /home/isee/yocto-project/meta-isee
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:740: including conf/abi_version.conf
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:741: including conf/site.conf
+DEBUG: CONF file 'conf/site.conf' not found
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:742: including conf/auto.conf
+DEBUG: CONF file 'conf/auto.conf' not found
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:743: including conf/local.conf
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:744: including conf/multiconfig/default.conf
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:745: including conf/machine/igep00x0.conf
+DEBUG: CONF /home/isee/yocto-project/meta-isee/conf/machine/igep00x0.conf:22: including conf/machine/include/tune-cortexa8.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/tune-cortexa8.inc:3: including conf/machine/include/arm/arch-armv7a.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/arm/arch-armv7a.inc:8: including conf/machine/include/arm/arch-armv6.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/arm/arch-armv6.inc:8: including conf/machine/include/arm/arch-armv5-dsp.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/arm/arch-armv5-dsp.inc:4: including conf/machine/include/arm/arch-armv5.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/arm/arch-armv5.inc:8: including conf/machine/include/arm/arch-armv4.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/arm/arch-armv4.inc:15: including conf/machine/include/arm/arch-arm.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/arm/arch-armv4.inc:16: including conf/machine/include/arm/feature-arm-thumb.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/arm/arch-armv5.inc:9: including conf/machine/include/arm/feature-arm-vfp.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/arm/arch-armv7a.inc:9: including conf/machine/include/arm/feature-arm-neon.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:746: including conf/machine-sdk/x86_64.conf
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:747: including conf/distro/poky.conf
+DEBUG: CONF /home/isee/yocto-project/meta-poky/conf/distro/poky.conf:101: including conf/distro/include/poky-world-exclude.inc
+Entering server connection loop
+DEBUG: CONF /home/isee/yocto-project/meta-poky/conf/distro/poky.conf:102: including conf/distro/include/no-static-libs.inc
+DEBUG: CONF /home/isee/yocto-project/meta-poky/conf/distro/poky.conf:103: including conf/distro/include/yocto-uninative.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:748: including conf/distro/defaultsetup.conf
+DEBUG: CONF /home/isee/yocto-project/meta/conf/distro/defaultsetup.conf:1: including conf/distro/include/default-providers.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/distro/defaultsetup.conf:2: including conf/distro/include/default-versions.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/distro/defaultsetup.conf:3: including conf/distro/include/default-distrovars.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/distro/defaultsetup.conf:4: including conf/distro/include/world-broken.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/distro/defaultsetup.conf:7: including conf/distro/include/tcmode-default.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/distro/include/tcmode-default.inc:71: including conf/distro/include/as-needed.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/distro/defaultsetup.conf:10: including conf/distro/include/tclibc-glibc.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/distro/defaultsetup.conf:12: including conf/distro/include/uninative-flags.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:749: including conf/documentation.conf
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:750: including conf/licenses.conf
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:751: including conf/sanity.conf
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/base.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/patch.bbclass (from /home/isee/yocto-project/meta/classes/base.bbclass:4)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/terminal.bbclass (from /home/isee/yocto-project/meta/classes/patch.bbclass:11)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/staging.bbclass (from /home/isee/yocto-project/meta/classes/base.bbclass:5)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/mirrors.bbclass (from /home/isee/yocto-project/meta/classes/base.bbclass:7)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/utils.bbclass (from /home/isee/yocto-project/meta/classes/base.bbclass:8)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/utility-tasks.bbclass (from /home/isee/yocto-project/meta/classes/base.bbclass:9)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/metadata_scm.bbclass (from /home/isee/yocto-project/meta/classes/base.bbclass:10)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/logging.bbclass (from /home/isee/yocto-project/meta/classes/base.bbclass:11)
+DEBUG: Inheriting /home/isee/yocto-project/meta-poky/classes/poky-sanity.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/uninative.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/package_rpm.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/package.bbclass (from /home/isee/yocto-project/meta/classes/package_rpm.bbclass:1)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/packagedata.bbclass (from /home/isee/yocto-project/meta/classes/package.bbclass:41)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/chrpath.bbclass (from /home/isee/yocto-project/meta/classes/package.bbclass:42)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/insane.bbclass (from /home/isee/yocto-project/meta/classes/package.bbclass:45)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/buildstats.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/image-mklibs.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/linuxloader.bbclass (from /home/isee/yocto-project/meta/classes/image-mklibs.bbclass:5)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/image-prelink.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/debian.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/devshell.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/sstate.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/license.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/remove-libtool.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/blacklist.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/sanity.bbclass (from configuration INHERITs:0)
+DEBUG: Clearing SRCREV cache due to cache policy of: clear
+DEBUG: Using cache in '/home/isee/yocto-project/build/cache/local_file_checksum_cache.dat'
+DEBUG: Using cache in '/home/isee/yocto-project/build/cache/bb_codeparser.dat'
+DEBUG: Enabling uninative
+Accepting [<socket.socket fd=7, family=AddressFamily.AF_UNIX, type=SocketKind.SOCK_STREAM, proto=0, laddr=bitbake.sock>]
+Connecting Client
+Running command ['setFeatures', [2]]
+Running command ['updateConfig', {'invalidate_stamp': None, 'debug': 3, 'dump_signatures': [], 'prefile': [], 'debug_domains': [], 'extra_assume_provided': [], 'server_timeout': None, 'abort': True, 'verbose': True, 'postfile': [], 'force': False, 'dry_run': False, 'profile': False}, {'LC_MONETARY': 'es_ES.UTF-8', 'BBPATH': '/home/isee/yocto-project/build', 'HOME': '/home/isee', 'BB_ENV_EXTRAWHITE': 'ALL_PROXY BBPATH_EXTRA BB_NO_NETWORK BB_NUMBER_THREADS BB_SETSCENE_ENFORCE BB_SRCREV_POLICY DISTRO FTPS_PROXY FTP_PROXY GIT_PROXY_COMMAND HTTPS_PROXY HTTP_PROXY MACHINE NO_PROXY PARALLEL_MAKE SCREENDIR SDKMACHINE SOCKS5_PASSWD SOCKS5_USER SSH_AGENT_PID SSH_AUTH_SOCK STAMPS_DIR TCLIBC TCMODE all_proxy ftp_proxy ftps_proxy http_proxy https_proxy no_proxy ', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', '_': '/home/isee/yocto-project/bitbake/bin/bitbake', 'SSH_CONNECTION': '85.62.58.93 42626 10.10.10.2 22', 'LC_TIME': 'es_ES.UTF-8', 'LC_ALL': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'PATH': '/home/isee/yocto-project/scripts:/home/isee/yocto-project/bitbake/bin:/home/isee/bin:/home/isee/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'LOGNAME': 'isee', 'LC_TELEPHONE': 'es_ES.UTF-8', 'SHLVL': '1', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'MAIL': '/var/mail/isee', 'LC_NAME': 'es_ES.UTF-8', 'LC_NUMERIC': 'es_ES.UTF-8', 'SSH_CLIENT': '85.62.58.93 42626 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'LC_ADDRESS': 'es_ES.UTF-8', 'SHELL': '/bin/bash', 'USER': 'isee', 'PWD': '/home/isee/yocto-project/meta-isee', 'TERM': 'xterm-256color', 'SSH_TTY': '/dev/pts/1', 'LC_PAPER': 'es_ES.UTF-8', 'LC_MEASUREMENT': 'es_ES.UTF-8', 'BUILDDIR': '/home/isee/yocto-project/build', 'OLDPWD': '/home/isee/yocto-project', 'LC_IDENTIFICATION': 'es_ES.UTF-8', 'LANGUAGE': 'en_US:en', 'LANG': 'en_US.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'XDG_SESSION_ID': '19'}, ['/home/isee/yocto-project/bitbake/bin/bitbake', 'linux-igep', '-vDDD']]
+Running command ['getVariable', 'BBINCLUDELOGS']
+Running command ['getVariable', 'BBINCLUDELOGS_LINES']
+Running command ['getSetVariable', 'BB_CONSOLELOG']
+Running command ['getUIHandlerNum']
+Running command ['setEventMask', 1, 8, {}, ['bb.runqueue.runQueueExitWait', 'bb.event.LogExecTTY', 'logging.LogRecord', 'bb.build.TaskFailed', 'bb.build.TaskBase', 'bb.event.ParseStarted', 'bb.event.ParseProgress', 'bb.event.ParseCompleted', 'bb.event.CacheLoadStarted', 'bb.event.CacheLoadProgress', 'bb.event.CacheLoadCompleted', 'bb.command.CommandFailed', 'bb.command.CommandExit', 'bb.command.CommandCompleted', 'bb.cooker.CookerExit', 'bb.event.MultipleProviders', 'bb.event.NoProvider', 'bb.runqueue.sceneQueueTaskStarted', 'bb.runqueue.runQueueTaskStarted', 'bb.runqueue.runQueueTaskFailed', 'bb.runqueue.sceneQueueTaskFailed', 'bb.event.BuildBase', 'bb.build.TaskStarted', 'bb.build.TaskSucceeded', 'bb.build.TaskFailedSilent', 'bb.build.TaskProgress', 'bb.event.ProcessStarted', 'bb.event.ProcessProgress', 'bb.event.ProcessFinished']]
+Running command ['getVariable', 'BB_DEFAULT_TASK']
+Running command ['setConfig', 'cmd', 'build']
+Running command ['buildTargets', ['linux-igep'], 'build']
+Connecting Client
+Disconnecting Client
+No timeout, exiting.
+Exiting
+--- Starting bitbake server pid 916 at 2018-03-02 13:39:38.673854 ---
+Started bitbake server pid 916
+DEBUG: Found bblayers.conf (/home/isee/yocto-project/build/conf/bblayers.conf)
+DEBUG: Adding layer /home/isee/yocto-project/meta
+DEBUG: Adding layer /home/isee/yocto-project/meta-poky
+DEBUG: Adding layer /home/isee/yocto-project/meta-yocto-bsp
+DEBUG: Adding layer /home/isee/yocto-project/meta-openembedded/meta-oe
+DEBUG: Adding layer /home/isee/yocto-project/meta-qt4
+DEBUG: Adding layer /home/isee/yocto-project/meta-isee
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:740: including conf/abi_version.conf
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:741: including conf/site.conf
+DEBUG: CONF file 'conf/site.conf' not found
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:742: including conf/auto.conf
+DEBUG: CONF file 'conf/auto.conf' not found
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:743: including conf/local.conf
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:744: including conf/multiconfig/default.conf
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:745: including conf/machine/igep00x0.conf
+DEBUG: CONF /home/isee/yocto-project/meta-isee/conf/machine/igep00x0.conf:22: including conf/machine/include/tune-cortexa8.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/tune-cortexa8.inc:3: including conf/machine/include/arm/arch-armv7a.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/arm/arch-armv7a.inc:8: including conf/machine/include/arm/arch-armv6.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/arm/arch-armv6.inc:8: including conf/machine/include/arm/arch-armv5-dsp.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/arm/arch-armv5-dsp.inc:4: including conf/machine/include/arm/arch-armv5.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/arm/arch-armv5.inc:8: including conf/machine/include/arm/arch-armv4.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/arm/arch-armv4.inc:15: including conf/machine/include/arm/arch-arm.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/arm/arch-armv4.inc:16: including conf/machine/include/arm/feature-arm-thumb.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/arm/arch-armv5.inc:9: including conf/machine/include/arm/feature-arm-vfp.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/machine/include/arm/arch-armv7a.inc:9: including conf/machine/include/arm/feature-arm-neon.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:746: including conf/machine-sdk/x86_64.conf
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:747: including conf/distro/poky.conf
+DEBUG: CONF /home/isee/yocto-project/meta-poky/conf/distro/poky.conf:101: including conf/distro/include/poky-world-exclude.inc
+DEBUG: CONF /home/isee/yocto-project/meta-poky/conf/distro/poky.conf:102: including conf/distro/include/no-static-libs.inc
+DEBUG: CONF /home/isee/yocto-project/meta-poky/conf/distro/poky.conf:103: including conf/distro/include/yocto-uninative.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:748: including conf/distro/defaultsetup.conf
+DEBUG: CONF /home/isee/yocto-project/meta/conf/distro/defaultsetup.conf:1: including conf/distro/include/default-providers.inc
+Entering server connection loop
+DEBUG: CONF /home/isee/yocto-project/meta/conf/distro/defaultsetup.conf:2: including conf/distro/include/default-versions.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/distro/defaultsetup.conf:3: including conf/distro/include/default-distrovars.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/distro/defaultsetup.conf:4: including conf/distro/include/world-broken.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/distro/defaultsetup.conf:7: including conf/distro/include/tcmode-default.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/distro/include/tcmode-default.inc:71: including conf/distro/include/as-needed.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/distro/defaultsetup.conf:10: including conf/distro/include/tclibc-glibc.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/distro/defaultsetup.conf:12: including conf/distro/include/uninative-flags.inc
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:749: including conf/documentation.conf
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:750: including conf/licenses.conf
+DEBUG: CONF /home/isee/yocto-project/meta/conf/bitbake.conf:751: including conf/sanity.conf
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/base.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/patch.bbclass (from /home/isee/yocto-project/meta/classes/base.bbclass:4)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/terminal.bbclass (from /home/isee/yocto-project/meta/classes/patch.bbclass:11)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/staging.bbclass (from /home/isee/yocto-project/meta/classes/base.bbclass:5)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/mirrors.bbclass (from /home/isee/yocto-project/meta/classes/base.bbclass:7)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/utils.bbclass (from /home/isee/yocto-project/meta/classes/base.bbclass:8)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/utility-tasks.bbclass (from /home/isee/yocto-project/meta/classes/base.bbclass:9)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/metadata_scm.bbclass (from /home/isee/yocto-project/meta/classes/base.bbclass:10)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/logging.bbclass (from /home/isee/yocto-project/meta/classes/base.bbclass:11)
+DEBUG: Inheriting /home/isee/yocto-project/meta-poky/classes/poky-sanity.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/uninative.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/package_rpm.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/package.bbclass (from /home/isee/yocto-project/meta/classes/package_rpm.bbclass:1)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/packagedata.bbclass (from /home/isee/yocto-project/meta/classes/package.bbclass:41)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/chrpath.bbclass (from /home/isee/yocto-project/meta/classes/package.bbclass:42)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/insane.bbclass (from /home/isee/yocto-project/meta/classes/package.bbclass:45)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/buildstats.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/image-mklibs.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/linuxloader.bbclass (from /home/isee/yocto-project/meta/classes/image-mklibs.bbclass:5)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/image-prelink.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/debian.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/devshell.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/sstate.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/license.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/remove-libtool.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/blacklist.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/isee/yocto-project/meta/classes/sanity.bbclass (from configuration INHERITs:0)
+DEBUG: Clearing SRCREV cache due to cache policy of: clear
+DEBUG: Using cache in '/home/isee/yocto-project/build/cache/local_file_checksum_cache.dat'
+DEBUG: Using cache in '/home/isee/yocto-project/build/cache/bb_codeparser.dat'
+DEBUG: Enabling uninative
+Accepting [<socket.socket fd=7, family=AddressFamily.AF_UNIX, type=SocketKind.SOCK_STREAM, proto=0, laddr=bitbake.sock>]
+Connecting Client
+Running command ['setFeatures', [2]]
+Running command ['updateConfig', {'verbose': True, 'postfile': [], 'prefile': [], 'dump_signatures': [], 'extra_assume_provided': [], 'invalidate_stamp': None, 'server_timeout': None, 'debug': 3, 'force': False, 'abort': True, 'profile': False, 'dry_run': False, 'debug_domains': []}, {'LC_IDENTIFICATION': 'es_ES.UTF-8', 'LOGNAME': 'isee', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'OLDPWD': '/home/isee/yocto-project', 'BUILDDIR': '/home/isee/yocto-project/build', 'SHELL': '/bin/bash', 'SSH_CLIENT': '85.62.58.93 42626 22', 'SSH_TTY': '/dev/pts/1', 'SHLVL': '1', 'LC_TELEPHONE': 'es_ES.UTF-8', 'BBPATH': '/home/isee/yocto-project/build', 'PWD': '/home/isee/yocto-project/meta-isee', 'LC_NAME': 'es_ES.UTF-8', 'XDG_SESSION_ID': '19', 'LC_ADDRESS': 'es_ES.UTF-8', 'TERM': 'xterm-256color', 'LC_NUMERIC': 'es_ES.UTF-8', 'USER': 'isee', 'LC_PAPER': 'es_ES.UTF-8', 'BB_ENV_EXTRAWHITE': 'ALL_PROXY BBPATH_EXTRA BB_NO_NETWORK BB_NUMBER_THREADS BB_SETSCENE_ENFORCE BB_SRCREV_POLICY DISTRO FTPS_PROXY FTP_PROXY GIT_PROXY_COMMAND HTTPS_PROXY HTTP_PROXY MACHINE NO_PROXY PARALLEL_MAKE SCREENDIR SDKMACHINE SOCKS5_PASSWD SOCKS5_USER SSH_AGENT_PID SSH_AUTH_SOCK STAMPS_DIR TCLIBC TCMODE all_proxy ftp_proxy ftps_proxy http_proxy https_proxy no_proxy ', 'MAIL': '/var/mail/isee', 'HOME': '/home/isee', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'LC_TIME': 'es_ES.UTF-8', 'LANG': 'en_US.UTF-8', 'PATH': '/home/isee/yocto-project/scripts:/home/isee/yocto-project/bitbake/bin:/home/isee/bin:/home/isee/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'es_ES.UTF-8', '_': '/home/isee/yocto-project/bitbake/bin/bitbake', 'SSH_CONNECTION': '85.62.58.93 42626 10.10.10.2 22', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANGUAGE': 'en_US:en', 'LC_ALL': 'en_US.UTF-8', 'LC_MONETARY': 'es_ES.UTF-8'}, ['/home/isee/yocto-project/bitbake/bin/bitbake', 'linux-igep', '-vDDD']]
+Running command ['getVariable', 'BBINCLUDELOGS']
+Running command ['getVariable', 'BBINCLUDELOGS_LINES']
+Running command ['getSetVariable', 'BB_CONSOLELOG']
+Running command ['getUIHandlerNum']
+Running command ['setEventMask', 1, 8, {}, ['bb.runqueue.runQueueExitWait', 'bb.event.LogExecTTY', 'logging.LogRecord', 'bb.build.TaskFailed', 'bb.build.TaskBase', 'bb.event.ParseStarted', 'bb.event.ParseProgress', 'bb.event.ParseCompleted', 'bb.event.CacheLoadStarted', 'bb.event.CacheLoadProgress', 'bb.event.CacheLoadCompleted', 'bb.command.CommandFailed', 'bb.command.CommandExit', 'bb.command.CommandCompleted', 'bb.cooker.CookerExit', 'bb.event.MultipleProviders', 'bb.event.NoProvider', 'bb.runqueue.sceneQueueTaskStarted', 'bb.runqueue.runQueueTaskStarted', 'bb.runqueue.runQueueTaskFailed', 'bb.runqueue.sceneQueueTaskFailed', 'bb.event.BuildBase', 'bb.build.TaskStarted', 'bb.build.TaskSucceeded', 'bb.build.TaskFailedSilent', 'bb.build.TaskProgress', 'bb.event.ProcessStarted', 'bb.event.ProcessProgress', 'bb.event.ProcessFinished']]
+Running command ['getVariable', 'BB_DEFAULT_TASK']
+Running command ['setConfig', 'cmd', 'build']
+Running command ['buildTargets', ['linux-igep'], 'build']
+Running command ['stateShutdown']
+Running command ['stateForceShutdown']
+Connecting Client
+Disconnecting Client
+No timeout, exiting.
+Exiting

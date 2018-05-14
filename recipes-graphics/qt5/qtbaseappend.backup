@@ -1,0 +1,67 @@
+FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
+
+SRC_URI_append_imxgpu3d = "file://0015-Add-eglfs-to-IMX-GPU.patch \
+			   file://0016-Configure-eglfs-with-egl-pkg-config.patch \
+                           file://0017-Hack-eglfs-viv-pro-with-lEGL-fb.patch \
+"
+PACKAGECONFIG_X11 = ""
+
+PACKAGECONFIG_DISTRO += " \
+    fontconfig \
+    examples \
+    eglfs \
+    sql-sqlite \
+"
+
+PACKAGECONFIG_GL_imxgpu3d = "gles2 eglfs"
+
+QT_CONFIG_FLAGS_APPEND = ""
+QT_CONFIG_FLAGS_APPEND_imxpxp = "${@bb.utils.contains('DISTRO_FEATURES', 'x11', '-no-eglfs', '-eglfs', d)}"
+QT_CONFIG_FLAGS_APPEND_imxgpu2d = "${@bb.utils.contains('DISTRO_FEATURES', 'x11', '-no-eglfs', '-no-opengl -linuxfb -no-eglfs', d)}"
+QT_CONFIG_FLAGS_APPEND_imxgpu3d = "-eglfs"
+QT_CONFIG_FLAGS_APPEND_use-mainline-bsp =  "-eglfs"
+QT_CONFIG_FLAGS_append = " ${QT_CONFIG_FLAGS_APPEND}"
+
+# By default if you run DISTRO_FEATURES == x11 meta-freescale's imx-gpu-viv recipe 
+# will take libEGL-X11 and link it to libEGL.so. QT will try to build X11 plugin
+# and will succed because it will take symbols from libEGL.so which is a link to
+# libEGL-x11. Later QT will try to build EGLFS plugin, this time it will fail
+# because it can't resolve symbols. Those symbols are in libEGL-fb so by the time
+# QT compile EGLFS plugin we need to tell it where libEGL-fb is located.
+# If a user wants to run QT application over X11 backend it will succed if libEGL
+# is a link of libEGL-x11 therefore if a user wnats to run an QT application over
+# EGLFS backend it will succend only if libEGL is a link of libEGL-fb. So for maximum
+# compatibility we better provide all libEGL backends and let the user decide where to link it.
+
+do_configure_prepend_mx6() {
+    # adapt qmake.conf to our needs
+    sed -i 's!load(qt_config)!!' ${S}/mkspecs/linux-oe-g++/qmake.conf
+    if [ "${IMXGPU}" = "3d"; then
+    
+            cat >> ${S}/mkspecs/linux-oe-g++/qmake.conf <<EOF
+IMX6_CFLAGS             = -DLINUX=1 -DEGL_API_FB=1
+EGLFS_DEVICE_INTEGRATION = eglfs_viv
+EOF
+        else
+            cat >> ${S}/mkspecs/linux-oe-g++/qmake.conf <<EOF
+IMX6_CFLAGS             = -DLINUX=1
+EOF
+        fi
+    cat >> ${S}/mkspecs/linux-oe-g++/qmake.conf <<EOF
+QMAKE_LIBS_EGL         += -lEGL -lEGL-fb -lEGL-x11 -lEGL-wl
+QMAKE_LIBS_OPENGL_ES2  += -lGLESv2 -lGLESv2-fb -lGLESv2-x11 -lGLESv2-wl -lEGL- -lEGL-fb -lEGL-x11 -lEGL-wl -lGAL -lGAL-fb -lGAL-x11 -lGAL-wl
+QMAKE_LIBS_OPENVG      += -lOpenVG -lEGL- -lEGL-fb -lEGL-x11 -lEGL-wl -lGAL -lGAL-fb -lGAL-x11 -lGAL-wl
+QMAKE_CFLAGS_RELEASE   += \$\$IMX6_CFLAGS
+QMAKE_CXXFLAGS_RELEASE += \$\$IMX6_CFLAGS
+QMAKE_CFLAGS_DEBUG   += \$\$IMX6_CFLAGS
+QMAKE_CXXFLAGS_DEBUG += \$\$IMX6_CFLAGS
+
+load(qt_config)
+
+EOF
+
+QMAKE_LIBDIR           += $$(QT_SYSROOT)/usr/lib
+QMAKE_INCDIR           += $$(QT_SYSROOT)/usr/include
+
+}
+

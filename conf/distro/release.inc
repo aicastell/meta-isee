@@ -1,6 +1,0 @@
-#
-# Distro tracking versions
-#
-ISEE_SUBVERSION = "3"
-SDK_SUBVERSION = "${ISEE_SUBVERSION}"
-EXTRAVERSION = ""

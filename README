@@ -6,48 +6,150 @@ Dependencies
 
 This layer depends on:
 
-  URI: git://git.isee.biz/pub/scm/poky.git
-  branch: danny
+  URI: https://git.yoctoproject.org/cgit/cgit.cgi/poky/
+  branch: pyro
+
+  URI: git://git.openembedded.org/meta-openembedded
+  branch: pyro
+
+  URI: https://github.com/meta-qt5/meta-qt5.git
+  branch: pyro
 
 Table of Contents
 =================
 
-  I. Building the meta-isee BSP layer
+  I. Building the meta-isee BSP Layer
 
-
-I. Building the meta-isee BSP layer
+I. Building the meta-isee BSP Layer
 =========================================
 
 In order to build an image with BSP support for a given release, you
-need to download the corresponding BSP repository.
+need to download the corresponding needed Layer:
 
-  $ git clone -b danny git://git.isee.biz/pub/scm/poky.git
+A: poky
+B: meta-openembedded
+C: meta-qt5
+D: meta-isee
+
+  $ git clone -b pyro https://git.yoctoproject.org/cgit/cgit.cgi/poky/
 
 Enter to the poky directory,
 
   $ cd poky
 
-and clone the meta-isee layer.
+Clone the rest of layers,
 
-  $ git clone -b danny git://git.isee.biz/pub/scm/meta-isee.git
+  $ git clone -b pyro git://git.openembedded.org/meta-openembedded
+  $ git clone -b pyro https://github.com/meta-qt5/meta-qt5.git
+
+Checkout to pyro branch of meta-isee,
+
+  $ cd meta-isee
+  $ git checkout pyro
+
+Source the environment,
 
   $ source oe-init-build-env
 
 Having done that, and assuming you downloaded the BSP contents
 at the top-level of your yocto build tree, you can build a igep
-image by adding the location of the meta-isee layer to
+image by adding the location of all the dependant layers layer to
 conf/bblayers.conf, e.g.:
 
-        <path to>/meta-isee \
+BBLAYERS ?= " \
+  /home/isee/yocto-project/meta \
+  /home/isee/yocto-project/meta-poky \
+  /home/isee/yocto-project/meta-yocto-bsp \
+  /home/isee/yocto-project/meta-openembedded/meta-oe \
+  /home/isee/yocto-project/meta-openembedded/meta-multimedia \
+  /home/isee/yocto-project/meta-openembedded/meta-python \
+  /home/isee/yocto-project/meta-openembedded/meta-networking \
+  /home/isee/yocto-project/meta-openembedded/meta-ruby \
+  /home/isee/yocto-project/meta-qt5 \
+  /home/isee/yocto-project/meta-isee \
+  "
 
-To enable the isee layer, add the igep00x0 MACHINE to conf/local.conf:
+To enable the isee layer, add any of igep supported machines to conf/local.conf, e.g.:
 
-  MACHINE ?= "igep00x0"
+  MACHINE ?= "igep0046dl"
+
+This is the list of available MACHINES at the moment:
+
+> igep0020
+> igep0020hf
+> igep0033
+> igep0034
+> igep0046dl
+
+To build images enter the build directory sourcing the environment with
+
+  $ source oe-init-build-env
 
 You should then be able to build a image as such:
 
-  $ bitbake core-image-sato
+  $ DISTRO="igep-release-no-x11" bitbake igep-minimal-image
 
-At the end of a successful build, you should have a image that
-you use boot from flash or a micro-SD card.
+In order to avoid writing DISTRO name all the time youcan also add the 
+DISTRO name to conf/local.conf, e.g.:
+
+  DISTRO ?= "igep-release-no-x11"
+
+Then you can build images simply using bytbake
+
+  $ bitbake igep-minimal-image
+
+This is the list of available DISTROS at the moment:
+
+> isee-mrskeltal
+> isee-release-no-x11
+> isee-release 
+> isee-systemd
+> criticallink-qt5
+
+This is the list of availabe IMAGES at the moment
+
+> igep-mrskeltal-image
+> igep-minimal-image
+> igep-basic-image
+> igep-basicX-image
+> igep-criticallink-qt5-image
+> igep-full-image
+> igep-test-image
+
+At the end of a successful build, you should have a compressed RootFS an u-boot and a zImage (Kernel)
+in yocto [tmp -> work -> machine ->deploy] directory.
+
+Untested Features
+=================
+
+X support.
+
+------------------------------------------------------------------------------------------------------------------------------
+
+WARNING: IT IS IMPORTANT TO RECALL THAT IF YOU BUILD AN IMAGE WITHOUT X SUPPORT YOU MUST SPECIFY ISEE DISTRO WITHOUT X SUPPORT
+THEREFORE IF YOU BUILD AN IMAGE WITH X SUPPORT YOU MUST SPECIFY ISEE DISTRO WITH X SUPPORT
+
+List of distros without X
+
+> isee-mrskeltal
+> isee-release-no-x11
+> isee-systemd
+> criticallink-qt5
+
+List of distros with X
+
+> isee-release
+
+List of images without X
+
+> igep-mrskeltal-image
+> igep-minimal-image
+> igep-basic-image
+> igep-criticallink-qt5-image
+> igep-test-image 
+ 
+List of images with X
+
+> igep-basicX-image
+> igep-full-image
 

@@ -1,0 +1,21 @@
+From f2447be1f85e601a17aba950100cee4fb1ca5164 Mon Sep 17 00:00:00 2001
+From: Jose Miquel Sanabria <jsanabria@iseebcn.com>
+Date: Fri, 13 Apr 2018 09:39:46 +0200
+Subject: [PATCH] Frame buffer EGL libs hardcoded name added to libraries
+
+---
+ config.tests/qpa/eglfs-viv/eglfs-viv.pro | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/config.tests/qpa/eglfs-viv/eglfs-viv.pro b/config.tests/qpa/eglfs-viv/eglfs-viv.pro
+index 2c3dc5c..a32ada4 100644
+--- a/config.tests/qpa/eglfs-viv/eglfs-viv.pro
++++ b/config.tests/qpa/eglfs-viv/eglfs-viv.pro
+@@ -5,3 +5,4 @@ integrity {
+   DEFINES += LINUX=1 EGL_API_FB=1
+ }
+ CONFIG -= qt
++LIBS += -lEGL-fb -lGLESv2-fb -lGAL-fb
+-- 
+2.7.4
+
