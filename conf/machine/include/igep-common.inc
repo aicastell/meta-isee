@@ -3,7 +3,6 @@
 # Add U-boot to building stage
 EXTRA_IMAGEDEPENDS_sopa0000 += "u-boot-igep-sopa"
 EXTRA_IMAGEDEPENDS_igep0020 += "u-boot-igep"
-EXTRA_IMAGEDEPENDS_igep0020hf += "u-boot-igep"
 EXTRA_IMAGEDEPENDS_igep0030 += "u-boot-igep"
 EXTRA_IMAGEDEPENDS_igep0032 += "u-boot-igep"
 EXTRA_IMAGEDEPENDS_igep0033 += "u-boot-igep"

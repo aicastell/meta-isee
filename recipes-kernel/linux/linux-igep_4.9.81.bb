@@ -3,7 +3,7 @@ SECTION = "kernel"
 LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://COPYING;md5=d7810fab7487fb0aad327b76f1be7cd7"
 
-COMPATIBLE_MACHINE = "igep0020|igep0020hf|igep0030|igep0032|igep0033|igep0034"
+COMPATIBLE_MACHINE = "igep0020|igep0030|igep0032|igep0033|igep0034"
 
 PREMIRRORS = ""
 MIRRORS = ""
@@ -16,7 +16,6 @@ SRCBRANCH = "isee-linux-v.4.9.y"
 
 KCONFIG_MODE ?= "--alldefconfig"
 KBUILD_DEFCONFIG_igep0020 ?= "omap2plus_defconfig"
-KBUILD_DEFCONFIG_igep0020hf ?= "omap2plus_defconfig"
 KBUILD_DEFCONFIG_igep0030 ?= "omap2plus_defconfig"
 KBUILD_DEFCONFIG_igep0032 ?= "omap2plus_defconfig"
 KBUILD_DEFCONFIG_igep0033 ?= "am335x_igep0034_defconfig"

@@ -76,7 +76,6 @@ To enable the isee layer, add any of igep supported machines to conf/local.conf,
 This is the list of available MACHINES at the moment:
 
 > igep0020
-> igep0020hf
 > igep0033
 > igep0034
 > igep0046dl
