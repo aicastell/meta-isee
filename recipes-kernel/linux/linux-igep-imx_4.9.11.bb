@@ -3,7 +3,7 @@ SECTION = "kernel"
 LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://COPYING;md5=d7810fab7487fb0aad327b76f1be7cd7"
 
-COMPATIBLE_MACHINE = "igep0046dl"
+COMPATIBLE_MACHINE = "igep0046dl|igep0046q|igep0146"
 
 PREMIRRORS = ""
 MIRRORS = ""
@@ -16,6 +16,9 @@ SRCBRANCH = "isee-imx_4.9.11_1.0.0_ga"
 
 KCONFIG_MODE ?= "--alldefconfig"
 KBUILD_DEFCONFIG_igep0046dl ?= "imx6_igep0046_defconfig"
+KBUILD_DEFCONFIG_igep0046q ?= "imx6_igep0046_defconfig"
+KBUILD_DEFCONFIG_igep0146 ?= "imx6_igep0046_defconfig"
+
 
 # make[3]: *** [scripts/extract-cert] Error 1
 DEPENDS += "openssl-native"

@@ -16,18 +16,24 @@ IMAGE_FSTYPES += "tar.bz2 "
 MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS += " kernel-modules"
 
 # Ship i.MX Firmware
-MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS += " \
+MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS_mx6dl += " \
 	firmware-imx-vpu-mx6dl \
 	firmware-imx-vpu-mx6q \
 	firmware-imx-sdma-mx6q \
         imx-gpu-g2d \
 "
 
-# Ship GPU Hw accelerated libraries
-MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS += " packagegroup-imx-gpu-libs"
+# Ship i.MX Firmware
+MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS_mx6q += " \
+        firmware-imx-vpu-mx6dl \
+        firmware-imx-vpu-mx6q \
+        firmware-imx-sdma-mx6q \
+        imx-gpu-g2d \
+"
 
-# Ship EGL Test Tool
-MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS += " eglinfo-fb"
+# Ship GPU Hw accelerated libraries
+MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS_mx6dl += " packagegroup-imx-gpu-libs"
+MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS_mx6q += " packagegroup-imx-gpu-libs"
 
 # Default Feautres
 MACHINE_FEATURES = "usbgadget usbhost vfat alsa touchscreen"
@@ -92,6 +98,7 @@ MACHINE_SOCARCH_SUFFIX_mx6dl = "-mx6qdl"
 MACHINE_SOCARCH_SUFFIX_mx6sx = "-mx6sx"
 MACHINE_SOCARCH_SUFFIX_mx6sl = "-mx6sl"
 MACHINE_SOCARCH_SUFFIX_mx6sll= "-mx6sll"
+MACHINE_SOCARCH_SUFFIX_mx6ul = "-mx6ul"
 MACHINE_SOCARCH_SUFFIX_mx6ull = "-mx6ul"
 MACHINE_SOCARCH_SUFFIX_use-mainline-bsp = "-imx"
 

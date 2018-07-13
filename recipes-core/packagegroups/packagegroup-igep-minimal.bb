@@ -11,6 +11,7 @@ RDEPENDS_${PN} = " \
 	bzip2 \
 	cmake \	
         dhcp-client \
+	dosfstools \
         e2fsprogs \
         e2fsprogs-mke2fs \
         fbida \
@@ -18,7 +19,13 @@ RDEPENDS_${PN} = " \
         i2c-tools \
         icu \
         iw \
+	kmod \
         ldd \
+	libnl \
+	libnl-dev \
+	libnl-cli \
+	libnl-genl \
+	libnl-nf \
         minicom \
         mtd-utils \
         mtd-utils-jffs2 \
@@ -27,7 +34,9 @@ RDEPENDS_${PN} = " \
         nano \
         openssh \
         opkg \
-        packagegroup-core-buildessential \
+	packagegroup-core-buildessential \
+	packagegroup-igep-netall \
+	parted \
 	psplash \
         python-smbus \
         rfkill \
@@ -38,3 +47,4 @@ RDEPENDS_${PN} = " \
         util-linux-mkfs \
         wpa-supplicant \
 "
+# Add compiler with recipe: packagegroup-core-buildessential

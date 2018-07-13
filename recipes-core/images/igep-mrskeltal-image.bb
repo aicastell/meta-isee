@@ -8,5 +8,7 @@ include recipes-core/images/core-image-minimal.bb
 
 # Include in rootfs
 IMAGE_INSTALL += " \
+	packagegroup-igep-initscripts \
+	kmod \
         kernel-modules \
 "

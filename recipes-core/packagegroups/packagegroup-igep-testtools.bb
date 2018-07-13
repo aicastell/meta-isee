@@ -6,6 +6,7 @@ inherit packagegroup
 
 RDEPENDS_${PN} = " \
         devmem2 \
+	igep-tools \
         iozone3 \
         iperf \
         memtester \

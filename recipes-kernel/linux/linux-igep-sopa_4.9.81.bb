@@ -1,9 +1,9 @@
-DESCRIPTION = "Linux kernel for IGEP PROCESSOR BOARDS"
+DESCRIPTION = "Linux kernel for SOPA0000 AM335x"
 SECTION = "kernel"
 LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://COPYING;md5=d7810fab7487fb0aad327b76f1be7cd7"
 
-COMPATIBLE_MACHINE = "igep0020|igep0020hf|igep0030|igep0032|igep0033|igep0034"
+COMPATIBLE_MACHINE = "sopa0000"
 
 PREMIRRORS = ""
 MIRRORS = ""
@@ -12,15 +12,10 @@ inherit kernel kernel-arch
 
 S = "${WORKDIR}/git"
 
-SRCBRANCH = "isee-linux-v.4.9.y"
+SRCBRANCH = "isee-linux-v.4.9.y-SOPA0000"
 
 KCONFIG_MODE ?= "--alldefconfig"
-KBUILD_DEFCONFIG_igep0020 ?= "omap2plus_defconfig"
-KBUILD_DEFCONFIG_igep0020hf ?= "omap2plus_defconfig"
-KBUILD_DEFCONFIG_igep0030 ?= "omap2plus_defconfig"
-KBUILD_DEFCONFIG_igep0032 ?= "omap2plus_defconfig"
-KBUILD_DEFCONFIG_igep0033 ?= "am335x_igep0034_defconfig"
-KBUILD_DEFCONFIG_igep0034 ?= "am335x_igep0034_defconfig"
+KBUILD_DEFCONFIG_sopa0000 ?= "am335x_sopa0000_defconfig"
 
 # make[3]: *** [scripts/extract-cert] Error 1
 DEPENDS += "openssl-native"
@@ -38,3 +33,4 @@ SRC_URI = "git://git@git.isee.biz/linux-kernel/linux-omap-2.6.git;protocol=ssh;b
 
 # Support for yocto to search defconfig in arch/arm/configs/
 require recipes-kernel/linux/linux-yocto.inc
+

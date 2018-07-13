@@ -87,12 +87,12 @@ To build images enter the build directory sourcing the environment with
 
 You should then be able to build a image as such:
 
-  $ DISTRO="igep-release-no-x11" bitbake igep-minimal-image
+  $ DISTRO="isee-release-no-x11" bitbake igep-minimal-image
 
 In order to avoid writing DISTRO name all the time youcan also add the 
 DISTRO name to conf/local.conf, e.g.:
 
-  DISTRO ?= "igep-release-no-x11"
+  DISTRO ?= "isee-release-no-x11"
 
 Then you can build images simply using bytbake
 

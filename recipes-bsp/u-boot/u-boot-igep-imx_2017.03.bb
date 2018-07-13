@@ -9,7 +9,7 @@ PROVIDES += "u-boot"
 
 require recipes-bsp/u-boot/u-boot.inc
 
-COMPATIBLE_MACHINE = "igep0046"
+COMPATIBLE_MACHINE = "igep0046dl|igep0046q|igep0146"
 
 PREMIRRORS = ""
 MIRRORS = ""

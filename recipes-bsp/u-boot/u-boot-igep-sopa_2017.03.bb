@@ -4,7 +4,7 @@ LIC_FILES_CHKSUM = "file://Licenses/gpl-2.0.txt;md5=b234ee4d69f5fce4486a80fdaf4a
 
 require recipes-bsp/u-boot/u-boot.inc
 
-COMPATIBLE_MACHINE = "igep0020|igep0030|igep0032|igep0033|igep0034"
+COMPATIBLE_MACHINE = "sopa0000"
 
 PREMIRRORS = ""
 MIRRORS = ""
@@ -16,7 +16,7 @@ DEFAULT_PREFERENCE = "-1"
 SRCREV = "${AUTOREV}"
 
 # Set latest stable branch
-SRCBRANCH = "isee_v2017.03"
+SRCBRANCH = "isee_v2017.03_SOPA"
 
 PV = "2017.03"
 PR = "r0"
