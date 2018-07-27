@@ -21,6 +21,7 @@ MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS_mx6dl += " \
 	firmware-imx-vpu-mx6q \
 	firmware-imx-sdma-mx6q \
         imx-gpu-g2d \
+	firmware-wifi \
 "
 
 # Ship i.MX Firmware
@@ -29,6 +30,7 @@ MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS_mx6q += " \
         firmware-imx-vpu-mx6q \
         firmware-imx-sdma-mx6q \
         imx-gpu-g2d \
+	firmware-wifi \
 "
 
 # Ship GPU Hw accelerated libraries
