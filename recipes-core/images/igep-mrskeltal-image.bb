@@ -8,7 +8,21 @@ include recipes-core/images/core-image-minimal.bb
 
 # Include in rootfs
 IMAGE_INSTALL += " \
+        alsa-state \
+        alsa-utils \
 	packagegroup-igep-initscripts \
 	kmod \
         kernel-modules \
+	igep-tools \
+	fbida \
+        mtd-utils \
+        mtd-utils-jffs2 \
+        mtd-utils-misc \
+        mtd-utils-ubifs \
+	dosfstools \
+        e2fsprogs \
+        e2fsprogs-mke2fs \	
+        util-linux \
+        util-linux-mkfs \
+	nano \	
 "

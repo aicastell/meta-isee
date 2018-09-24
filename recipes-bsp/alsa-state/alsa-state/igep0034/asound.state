@@ -1,4 +1,4 @@
-state.tlv320aic3106au {
+state.AM335xBASE0040 {
 	control.1 {
 		iface MIXER
 		name 'Codec Operation Mode'

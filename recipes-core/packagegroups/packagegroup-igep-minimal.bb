@@ -8,10 +8,10 @@ RDEPENDS_${PN} = " \
         alsa-state \
         alsa-utils \
         bridge-utils \
-	bzip2 \
-	cmake \	
+        bzip2 \
+        cmake \
         dhcp-client \
-	dosfstools \
+        dosfstools \
         e2fsprogs \
         e2fsprogs-mke2fs \
         fbida \
@@ -19,14 +19,15 @@ RDEPENDS_${PN} = " \
         i2c-tools \
         icu \
         iw \
-	kmod \
+        kmod \
         ldd \
-	libnl \
-	libnl-dev \
-	libnl-cli \
-	libnl-genl \
-	libnl-nf \
+        libnl \
+        libnl-dev \
+        libnl-cli \
+        libnl-genl \
+        libnl-nf \
         minicom \
+        mmc-utils \
         mtd-utils \
         mtd-utils-jffs2 \
         mtd-utils-misc \
@@ -34,10 +35,10 @@ RDEPENDS_${PN} = " \
         nano \
         openssh \
         opkg \
-	packagegroup-core-buildessential \
-	packagegroup-igep-netall \
-	parted \
-	psplash \
+        packagegroup-core-buildessential \
+        packagegroup-igep-netall \
+        parted \
+        psplash \
         python-smbus \
         rfkill \
         sqlite3 \
@@ -47,4 +48,3 @@ RDEPENDS_${PN} = " \
         util-linux-mkfs \
         wpa-supplicant \
 "
-# Add compiler with recipe: packagegroup-core-buildessential
