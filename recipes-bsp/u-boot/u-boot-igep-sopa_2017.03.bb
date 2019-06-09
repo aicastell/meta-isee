@@ -23,7 +23,7 @@ PR = "r0"
 
 S = "${WORKDIR}/git"
 
-SRC_URI = "git://git@git.isee.biz/arm-boot/u-boot-arm.git;protocol=ssh;branch=${SRCBRANCH}"
+SRC_URI = "git://git.isee.biz/arm-boot/u-boot-arm.git;protocol=https;branch=${SRCBRANCH}"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
