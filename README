@@ -41,7 +41,7 @@ Clone the rest of layers,
 
   $ git clone -b pyro git://git.openembedded.org/meta-openembedded
   $ git clone -b pyro https://github.com/meta-qt5/meta-qt5.git
-  $ git clone -b pyro-next https://github.com/aicastell/meta-isee.git
+  $ git clone -b pyro-wip https://github.com/aicastell/meta-isee.git
 
 Source the environment,
 
