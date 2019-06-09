@@ -41,11 +41,7 @@ Clone the rest of layers,
 
   $ git clone -b pyro git://git.openembedded.org/meta-openembedded
   $ git clone -b pyro https://github.com/meta-qt5/meta-qt5.git
-
-Checkout to pyro branch of meta-isee,
-
-  $ cd meta-isee
-  $ git checkout pyro
+  $ git clone -b pyro-next https://github.com/aicastell/meta-isee.git
 
 Source the environment,
 
@@ -57,21 +53,21 @@ image by adding the location of all the dependant layers layer to
 conf/bblayers.conf, e.g.:
 
 BBLAYERS ?= " \
-  /home/isee/yocto-project/meta \
-  /home/isee/yocto-project/meta-poky \
-  /home/isee/yocto-project/meta-yocto-bsp \
-  /home/isee/yocto-project/meta-openembedded/meta-oe \
-  /home/isee/yocto-project/meta-openembedded/meta-multimedia \
-  /home/isee/yocto-project/meta-openembedded/meta-python \
-  /home/isee/yocto-project/meta-openembedded/meta-networking \
-  /home/isee/yocto-project/meta-openembedded/meta-ruby \
-  /home/isee/yocto-project/meta-qt5 \
-  /home/isee/yocto-project/meta-isee \
+  /path/to/yocto-project/meta \
+  /path/to/yocto-project/meta-poky \
+  /path/to/yocto-project/meta-yocto-bsp \
+  /path/to/yocto-project/meta-openembedded/meta-oe \
+  /path/to/yocto-project/meta-openembedded/meta-multimedia \
+  /path/to/yocto-project/meta-openembedded/meta-python \
+  /path/to/yocto-project/meta-openembedded/meta-networking \
+  /path/to/yocto-project/meta-openembedded/meta-ruby \
+  /path/to/yocto-project/meta-qt5 \
+  /path/to/yocto-project/meta-isee \
   "
 
 To enable the isee layer, add any of igep supported machines to conf/local.conf, e.g.:
 
-  MACHINE ?= "igep0046dl"
+  MACHINE ?= "igep0020"
 
 This is the list of available MACHINES at the moment:
 
