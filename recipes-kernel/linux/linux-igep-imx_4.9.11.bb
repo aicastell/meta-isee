@@ -32,7 +32,7 @@ LINUX_VERSION ?= "4.9.11"
 # Set autorev for development purposes
 SRCREV = "${AUTOREV}"
 
-SRC_URI = "git://git@git.isee.biz/linux-kernel/linux-imx.git;protocol=ssh;branch=${SRCBRANCH}"
+SRC_URI = "git://git.isee.biz/linux-kernel/linux-imx.git;protocol=https;branch=${SRCBRANCH}"
 
 # Support for yocto to search defconfig in arch/arm/configs/
 require recipes-kernel/linux/linux-yocto.inc
