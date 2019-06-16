@@ -110,7 +110,7 @@ This is the list of available IMAGES at the moment:
 
 If you edited conf/local.conf, you can build the image by simply using bitbake:
 
-  $ bitbake <image>
+  $ bitbake igep-minimal-image
 
 If you not edited conf/local.conf, you can build the image as such:
 
