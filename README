@@ -31,11 +31,9 @@ B: meta-openembedded
 C: meta-qt5
 D: meta-isee
 
+Clone the Poky layer:
+
   $ git clone -b pyro https://git.yoctoproject.org/cgit/cgit.cgi/poky/
-
-Enter to the poky directory,
-
-  $ cd poky
 
 Clone the rest of layers,
 
@@ -47,15 +45,13 @@ Source the environment,
 
   $ source oe-init-build-env
 
-Having done that, and assuming you downloaded the BSP contents
-at the top-level of your yocto build tree, you can build a igep
-image by adding the location of all the dependant layers layer to
-conf/bblayers.conf, e.g.:
+Edit conf/bblayers.conf to add the location of all the dependant
+layers:
 
 BBLAYERS ?= " \
-  /path/to/yocto-project/meta \
-  /path/to/yocto-project/meta-poky \
-  /path/to/yocto-project/meta-yocto-bsp \
+  /path/to/yocto-project/poky/meta \
+  /path/to/yocto-project/poky/meta-poky \
+  /path/to/yocto-project/poky/meta-yocto-bsp \
   /path/to/yocto-project/meta-openembedded/meta-oe \
   /path/to/yocto-project/meta-openembedded/meta-multimedia \
   /path/to/yocto-project/meta-openembedded/meta-python \
@@ -63,7 +59,7 @@ BBLAYERS ?= " \
   /path/to/yocto-project/meta-openembedded/meta-ruby \
   /path/to/yocto-project/meta-qt5 \
   /path/to/yocto-project/meta-isee \
-  "
+"
 
 To enable the isee layer, add any of igep supported machines to conf/local.conf, e.g.:
 
@@ -76,20 +72,16 @@ This is the list of available MACHINES at the moment:
 > igep0034
 > igep0046dl
 
-To build images enter the build directory sourcing the environment with
-
-  $ source oe-init-build-env
-
 You should then be able to build a image as such:
 
   $ DISTRO="isee-release-no-x11" bitbake igep-minimal-image
 
-In order to avoid writing DISTRO name all the time youcan also add the 
-DISTRO name to conf/local.conf, e.g.:
+In order to avoid writing DISTRO name all the time, you can also add the DISTRO
+name to conf/local.conf, e.g.:
 
   DISTRO ?= "isee-release-no-x11"
 
-Then you can build images simply using bytbake
+Then you can build images simply using bitbake
 
   $ bitbake igep-minimal-image
 
