@@ -26,16 +26,16 @@ I. Building the meta-isee BSP Layer
 In order to build an image with BSP support for a given release, you
 need to download the corresponding needed Layer:
 
-A: poky
-B: meta-openembedded
-C: meta-qt5
-D: meta-isee
+  A: poky
+  B: meta-openembedded
+  C: meta-qt5
+  D: meta-isee
 
 Clone the Poky layer:
 
   $ git clone -b pyro https://git.yoctoproject.org/cgit/cgit.cgi/poky/
 
-Clone the rest of layers,
+Clone the rest of layers:
 
   $ git clone -b pyro git://git.openembedded.org/meta-openembedded
   $ git clone -b pyro https://github.com/meta-qt5/meta-qt5.git
@@ -61,47 +61,60 @@ BBLAYERS ?= " \
   /path/to/yocto-project/meta-isee \
 "
 
-To enable the isee layer, add any of igep supported machines to conf/local.conf, e.g.:
+This is the list of all available MACHINES at the moment:
+
+  machine
+  ==========
+  igep0020
+  igep0030
+  igep0032
+  igep0033
+  igep0034
+  igep0146
+  igep0046q
+  igep0046dl
+  sopa0000
+
+To setup the machine, you can add any of igep supported machines to
+conf/local.conf, e.g.:
 
   MACHINE ?= "igep0020"
 
-This is the list of available MACHINES at the moment:
-
-> igep0020
-> igep0033
-> igep0034
-> igep0046dl
-
-You should then be able to build a image as such:
-
-  $ DISTRO="isee-release-no-x11" bitbake igep-minimal-image
-
-In order to avoid writing DISTRO name all the time, you can also add the DISTRO
-name to conf/local.conf, e.g.:
-
-  DISTRO ?= "isee-release-no-x11"
-
-Then you can build images simply using bitbake
-
-  $ bitbake igep-minimal-image
 
 This is the list of available DISTROS at the moment:
 
-> isee-mrskeltal
-> isee-release-no-x11
-> isee-release 
-> isee-systemd
-> criticallink-qt5
+  distro                Description
+  ===============================================================
+  isee-release          Rootfs with sysV suite and x11
+  isee-release-no-x11   Rootfs with sysV suite and without x11
+  isee-systemd          Rootfs with systemd suite and x11
+  isee-systemd-no-x11   Rootfs with systemd suite and without x11
+  isee-mrskeltal        ??
+  criticallink-qt5      ??
 
-This is the list of availabe IMAGES at the moment
+To setup the distro, add any of igep supported distros to conf/local.conf, e.g.:
 
-> igep-mrskeltal-image
-> igep-minimal-image
-> igep-basic-image
-> igep-basicX-image
-> igep-criticallink-qt5-image
-> igep-full-image
-> igep-test-image
+  DISTRO ?= "isee-release-no-x11"
+
+This is the list of available IMAGES at the moment:
+
+  image
+  ===========================
+  igep-basicX-image
+  igep-test-image
+  igep-criticallink-qt5-image
+  igep-mrskeltal-image
+  igep-minimal-image
+  igep-basic-image
+  igep-full-image
+
+If you edited conf/local.conf, you can build the image by simply using bitbake:
+
+  $ bitbake <image>
+
+If you not edited conf/local.conf, you can build the image as such:
+
+  $ DISTRO="isee-release-no-x11" MACHINE=igep0020 bitbake igep-minimal-image
 
 At the end of a successful build, you should have a compressed RootFS an u-boot and a zImage (Kernel)
 in yocto [tmp -> work -> machine ->deploy] directory.
